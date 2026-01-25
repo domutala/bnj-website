@@ -73,7 +73,7 @@
 
   "home": {
     "marquee": {
-      "title": "Nos partenaire"
+      "title": "Nos partenaires"
     },
 
     "hero": {
@@ -127,5 +127,18 @@
         }
       }
     }
-  }
+  },
+
+  "profiles": [
+    "Commerical",
+    "Assistante polyvalente",
+    "Graphiste",
+    "Assistante administrative",
+    "Growth Hacker",
+    "Copywriter",
+    "Community Manager",
+    "Agent SAV",
+    "Customer Success Manager",
+    "Business Developer"
+  ]
 }

@@ -6,6 +6,7 @@ import UiHomeMarquee from "~/components/home/marquee.vue";
 import UiHomeHero from "~/components/home/hero.vue";
 import UiHomeCeo from "~/components/home/ceo.vue";
 import UiHomeStats from "~/components/home/stats.vue";
+import UiHomeProfile from "~/components/home/profile.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import UiHomeStats from "~/components/home/stats.vue";
     <div class="w-full bg-black text-white">
       <UiHomeHero />
       <UiHomeMarquee />
+      <UiHomeProfile />
       <UiHomeDescription class="z-49" />
     </div>
 

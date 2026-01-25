@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
 import { useWindowScroll } from "@vueuse/core";
+import { getLangItems } from "~/tools/lang";
 
 const yDir = ref<"bottom" | "top">();
 const { y, directions } = useWindowScroll({
@@ -127,10 +128,6 @@ const items = ref<NavigationMenuItem[]>([
 const bgWhite = computed(() => y.value !== 0 && yDir.value === "top");
 const hide = computed(() => y.value !== 0 && yDir.value !== "top");
 
-const textColor = computed(() => {
-  return "text-white";
-});
-
 addRouteMiddleware(() => {
   setColor("white");
 });
@@ -142,7 +139,7 @@ addRouteMiddleware(() => {
     :class="[
       hide ? '-top-full' : 'top-0',
       bgWhite
-        ? 'bg-white text-black shadow-sm'
+        ? 'bg-white/20 text-black shadow-sm backdrop-blur'
         : color === 'white'
           ? 'bg-black/0 text-white'
           : 'bg-white/0 text-black',
@@ -158,7 +155,7 @@ addRouteMiddleware(() => {
 
         <div class="mx-auto"></div>
 
-        <div>
+        <div class="flex items-center gap-2">
           <UButton
             color="primary"
             aria-label="Color picker"
@@ -166,6 +163,23 @@ addRouteMiddleware(() => {
             icon="i-lucide-calendar-clock"
             :label="$t('meeting.cta')"
           />
+
+          <UDropdownMenu
+            :items="[getLangItems()]"
+            :content="{ align: 'end', collisionPadding: 12 }"
+          >
+            <UButton
+              v-if="!$slots.default"
+              icon="i-lucide-globe"
+              color="light"
+              variant="ghost"
+              size="xl"
+              square
+              class="cursor-pointer"
+            />
+
+            <slot />
+          </UDropdownMenu>
         </div>
       </div>
     </u-container>

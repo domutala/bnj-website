@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-30">
+  <section class="mt-10">
     <u-container>
       <div class="relative w-full z-10">
         <div

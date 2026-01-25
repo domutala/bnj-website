@@ -5,7 +5,7 @@ const testimonials = ref([
       name: "Julien Picard",
       description: "Directeur commercial",
       avatar: {
-        src: "https://cdn.prod.website-files.com/63f68048171c386de3e8541b/67e3e9a25842decdf3442633_directeur%20commercial.jpeg",
+        src: "/images/partners/Julien_Picard.jpeg",
         alt: "Julien Picard",
       },
     },
@@ -17,7 +17,7 @@ const testimonials = ref([
       name: "Mathieu Dumont",
       description: "SOrganisateur de voyages",
       avatar: {
-        src: "https://cdn.prod.website-files.com/63f68048171c386de3e8541b/67e3e9a2623a988d6304d145_agence%20de%20voyage-p-500.jpeg",
+        src: "/images/partners/Mathieu_Dumont.jpeg",
         alt: "Mathieu Dumont",
       },
     },
@@ -29,7 +29,7 @@ const testimonials = ref([
       name: "Sara Vallée",
       description: "SConsultante en recrutement",
       avatar: {
-        src: "https://cdn.prod.website-files.com/63f68048171c386de3e8541b/67e3e9a2623a988d6304d142_consultante%20recrutement.jpeg",
+        src: "/images/partners/Sara_Vallée.jpeg",
         alt: "Sara Vallée",
       },
     },

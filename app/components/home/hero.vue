@@ -28,7 +28,7 @@
     </div>
 
     <div class="size-full flex">
-      <u-container class="mt-60">
+      <u-container class="mt-40">
         <div class="max-w-200 px-5">
           <h1 class="text-3xl md:text-6xl" v-html="$t('home.hero.text')"></h1>
 

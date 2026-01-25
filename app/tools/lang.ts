@@ -10,6 +10,24 @@ export function getLangItems() {
     ar: "i-flag-sa-1x1",
   };
 
+  const items: DropdownMenuItem[] = [
+    ...locales.value.map((l) => ({
+      label: l.name,
+      icon: langFlags[l.code],
+      checked: locale.value === l.code,
+      onSelect(e: Event) {
+        e.preventDefault();
+        setLocale(l.code);
+      },
+    })),
+  ];
+
+  return items;
+}
+
+export function getLangItem() {
+  const { locales, locale } = useI18n();
+
   const current = computed(() => {
     return locales.value.find((l) => l.code === locale.value);
   });
@@ -17,17 +35,7 @@ export function getLangItems() {
   const items: DropdownMenuItem = {
     label: current.value?.name,
     icon: "i-lucide-languages",
-    children: [
-      ...locales.value.map((l) => ({
-        label: l.name,
-        icon: langFlags[l.code],
-        checked: locale.value === l.code,
-        onSelect(e: Event) {
-          e.preventDefault();
-          setLocale(l.code);
-        },
-      })),
-    ],
+    children: getLangItems(),
   };
 
   return items;

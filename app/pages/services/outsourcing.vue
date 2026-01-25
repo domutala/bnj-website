@@ -197,21 +197,23 @@ setColor("black");
           class="bg-gray-100 rounded-2xl rounded-t-[3em] border border-primary/30"
         >
           <div class="p-10 py-16">
-            <div class="flex">
+            <div class="flex md:flex-row flex-col gap-5">
               <div>
                 <div
-                  class="size-50 overflow-hidden rounded-full relative border-t border border-default ml-auto mr-10"
+                  class="size-25 md:size-50 overflow-hidden rounded-full relative border-t border border-default mr-10"
                 >
-                  <img
-                    src="https://res.cloudinary.com/proxify-io/image/upload/f_auto,dpr_auto,c_fill,q_auto:best,g_face,w_400,h_400/v1/cms/images/video_reviews/yWPBqMg3AMzlUsEmKBcGmtSAO8uCOAloVBblWtEc.png"
-                    alt="Illustration"
+                  <u-avatar
+                    src="/images/partners/Julien_Picard.jpeg"
+                    alt="Julien Picard"
                     class="size-full mx-auto object-top object-cover px-0"
                   />
                 </div>
               </div>
 
               <div>
-                <p class="text-3xl font-bold">
+                <p
+                  class="text-lg md:text-3xl font-bold before:content-[open-quote] after:content-[close-quote]"
+                >
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Error incidunt sequi, aut autem recusandae culpa harum
                   doloribus corrupti, aspernatur assumenda commodi, enim placeat

@@ -23,6 +23,14 @@ export default defineNuxtConfig({
 
   components: [{ path: "~/components/ui", global: true, prefix: "ui" }],
 
+  colorMode: {
+    preference: "light",
+    fallback: "light",
+    classSuffix: "",
+    storageKey: "nuxt-color-mode",
+    disableTransition: true,
+  },
+
   ui: {
     theme: {
       colors: [
