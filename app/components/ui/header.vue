@@ -2,6 +2,11 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 import { useWindowScroll } from "@vueuse/core";
 import { getLangItems } from "~/tools/lang";
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const showHorizontalNav = breakpoints.greaterOrEqual("lg");
+const hideExtras = breakpoints.smallerOrEqual("sm");
 
 const yDir = ref<"bottom" | "top">();
 const { y, directions } = useWindowScroll({
@@ -18,41 +23,6 @@ const { color, setColor } = useHeader();
 
 const i18n = useI18n();
 const items = ref<NavigationMenuItem[]>([
-  {
-    label: "Guide",
-    to: "/docs/getting-started",
-    children: [
-      {
-        label: "Introduction",
-        description: "Fully styled and customizable components for Nuxt.",
-        icon: "i-lucide-house",
-      },
-      {
-        label: "Installation",
-        description:
-          "Learn how to install and configure Nuxt UI in your application.",
-        icon: "i-lucide-cloud-download",
-      },
-      {
-        label: "Icons",
-        icon: "i-lucide-smile",
-        description:
-          "You have nothing to do, @nuxt/icon will handle it automatically.",
-      },
-      {
-        label: "Colors",
-        icon: "i-lucide-swatch-book",
-        description:
-          "Choose a primary and a neutral color from your Tailwind CSS theme.",
-      },
-      {
-        label: "Theme",
-        icon: "i-lucide-cog",
-        description:
-          "You can customize components by using the `class` / `ui` props or in your app.config.ts.",
-      },
-    ],
-  },
   {
     label: i18n.t("services.label"),
     to: "/services",
@@ -128,6 +98,10 @@ const items = ref<NavigationMenuItem[]>([
 const bgWhite = computed(() => y.value !== 0 && yDir.value === "top");
 const hide = computed(() => y.value !== 0 && yDir.value !== "top");
 
+const textColor = computed(() => {
+  return bgWhite.value || color.value === "black" ? "text-black" : "text-white";
+});
+
 addRouteMiddleware(() => {
   setColor("white");
 });
@@ -137,12 +111,13 @@ addRouteMiddleware(() => {
   <header
     class="ui-header transition-all fixed w-full z-20"
     :class="[
+      textColor,
       hide ? '-top-full' : 'top-0',
       bgWhite
-        ? 'bg-white/20 text-black shadow-sm backdrop-blur'
+        ? 'bg-white/35  shadow-sm backdrop-blur'
         : color === 'white'
-          ? 'bg-black/0 text-white'
-          : 'bg-white/0 text-black',
+          ? 'bg-black/0 '
+          : 'bg-white/0 ',
     ]"
   >
     <u-container class="max-w-425">
@@ -153,7 +128,26 @@ addRouteMiddleware(() => {
           </div>
         </nuxt-link>
 
-        <div class="mx-auto"></div>
+        <div
+          v-if="showHorizontalNav"
+          class="ml-20 mr-auto flex items-center gap-3"
+        >
+          <template v-for="(item, index) in items" :key="index">
+            <nuxt-link v-if="!item.children" :to="item.to">
+              {{ item.label }}
+            </nuxt-link>
+
+            <UDropdownMenu v-else :items="item.children">
+              <div class="flex items-center gap-2 cursor-pointer">
+                {{ item.label }}
+
+                <u-icon name="i-lucide-chevron-down" />
+              </div>
+            </UDropdownMenu>
+          </template>
+        </div>
+
+        <div v-else class="mx-auto"></div>
 
         <div class="flex items-center gap-2">
           <UButton
@@ -161,25 +155,27 @@ addRouteMiddleware(() => {
             aria-label="Color picker"
             class="cursor-pointer rounded-full p-3 px-5"
             icon="i-lucide-calendar-clock"
-            :label="$t('meeting.cta')"
+            :label="!hideExtras ? $t('meeting.cta') : undefined"
           />
 
-          <UDropdownMenu
-            :items="[getLangItems()]"
-            :content="{ align: 'end', collisionPadding: 12 }"
-          >
-            <UButton
-              v-if="!$slots.default"
-              icon="i-lucide-globe"
-              color="light"
-              variant="ghost"
-              size="xl"
-              square
-              class="cursor-pointer"
-            />
-
-            <slot />
-          </UDropdownMenu>
+          <template v-if="!hideExtras">
+            <UDropdownMenu
+              :items="[getLangItems()]"
+              :content="{ align: 'end', collisionPadding: 12 }"
+            >
+              <UButton
+                v-if="!$slots.default"
+                icon="i-lucide-globe"
+                color="light"
+                variant="ghost"
+                size="xl"
+                square
+                class="cursor-pointer"
+              >
+                <u-icon name="" class="" />
+              </UButton>
+            </UDropdownMenu>
+          </template>
         </div>
       </div>
     </u-container>

@@ -36,8 +36,9 @@
               :class="{ '-mt-5': index === 1 }"
               :ui="{
                 leadingIcon: 'size-12',
-                container: 'bg-gray-900',
+                container: 'bg-gray-950',
                 title: 'text-white',
+                description: 'text-white',
               }"
               :to="
                 $localePath({
