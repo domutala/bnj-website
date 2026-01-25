@@ -1,0 +1,131 @@
+{
+  "cookies": {
+    "text": "Pour vous offrir une expérience optimale, nous utilisons des cookies. Ils nous aident à personnaliser le contenu et à comprendre comment vous utilisez le site.",
+    "btn": "OK, compris"
+  },
+
+  "words": {
+    "on_this_page": "Sur cette page",
+    "hire_me": "Engagez-moi"
+  },
+
+  "services": {
+    "more": "En savoir plus",
+    "label": "Services",
+
+    "title": "L’agence qui vous connecte aux talents dont vous avez besoin",
+    "description": "Avec BNJ Team Maker, l’externalisation devient un levier de croissance stratégique. Nous trouvons pour vous les profils les plus qualifiés, prêts à s’intégrer à votre équipe pour vous aider à atteindre vos objectifs plus rapidement. Vous déléguez, nous plaçons les meilleurs profils internationaux. Vous gagnez du temps, nous vous apportons de la valeur.",
+
+    "list": [
+      {
+        "title": "Externalisation",
+        "description": "Mise à disposition des meilleurs talents pour des missions diverses (courtes, moyennes ou longues durées) tout en réduisant vos coûts RH",
+        "objective": "Transformer un frontend vieillissant en une interface moderne et performante.",
+        "icon": "i-lucide-external-link",
+        "code": "outsourcing"
+      },
+      {
+        "title": "Management simplifiée",
+        "description": "Nous investissons en capital et en ressources humaines dans votre société",
+        "objective": "Livrer des interfaces fiables, efficaces et pensées pour durer.",
+        "icon": "i-fluent-people-team-48-regular",
+        "code": "management"
+      },
+      {
+        "title": "Assurance",
+        "description": "Réaction rapide en cas de départ de vos collaborateurs ainsi que des futurs recrutements dans l'optique de garantir la continuité de votre entreprise",
+        "icon": "i-material-symbols-light-verified-user-outline",
+        "code": "assurance"
+      },
+      {
+        "title": "Formations",
+        "description": "Développer les compétences de vos collaborateurs avec des experts spécialisés dans leur domaine pour améliorer la productivité et renforcer l'esprit d'équipe",
+        "icon": "i-ph-book-open-text-light",
+        "code": "formation"
+      },
+
+      {
+        "title": "Développement Fullstack Complet",
+        "description": "Je prends en charge des projets de bout en bout : frontend Nuxt, backend NestJS, base de données, intégration et optimisation. Je conçois des architectures complètes et cohérentes, pensées pour la stabilité et l'évolution.",
+        "objective": "Livrer un produit complet, techniquement solide et prêt pour la production.",
+        "icon": "i-mingcute-usb-flash-disk-line"
+      },
+      {
+        "title": "Audit Technique et Optimisation de Performance",
+        "description": "J'analyse en profondeur votre application (frontend et backend) pour détecter les lenteurs, problèmes d'architecture, doublons de code ou failles de performance. Je fournis un rapport clair et priorisé, puis j'applique les optimisations nécessaires.",
+        "objective": "Améliorer la qualité, la vitesse et la stabilité de votre application.",
+        "icon": "i-lucide-laptop-minimal-check"
+      },
+      {
+        "title": "Automatisation, CI/CD et Déploiement",
+        "description": "Je mets en place des pipelines de déploiement stables et automatisés via GitHub Actions, GitLab CI ou Jenkins. Automatisation des tests, builds fiables, déploiements sécurisés, monitoring et organisation des environnements.",
+        "objective": "Rendre vos livraisons plus rapides, plus sûres et parfaitement reproductibles.",
+        "icon": "i-lucide-git-graph"
+      },
+      {
+        "title": "Développement de Dashboards et Outils Métier",
+        "description": "Je conçois des outils internes simples et efficaces : SIRH, gestion documentaire, workflows d'approbation, reporting, modules métiers sur mesure. Je privilégie la clarté, la rapidité et la facilité d'utilisation.",
+        "objective": "Améliorer la productivité de vos équipes grâce à des outils adaptés à leur réalité.",
+        "icon": "i-lucide-tool-case"
+      }
+    ]
+  },
+
+  "home": {
+    "marquee": {
+      "title": "Nos partenaire"
+    },
+
+    "hero": {
+      "text": "Externalisez votre équipe en réduisant vos coûts dans un temps record",
+      "cta": "Découvrir notre formule"
+    },
+
+    "stats": {
+      "title": "Travaillez avec des A-Player moins chères que vos alternants en toute simplicité",
+      "list": [
+        { "count": "+108", "title": "Recrutements personalisés" },
+        { "count": "+9", "title": "Partenaires qui nous font confiance" },
+        { "count": "+10", "title": "Offres d'emplois disponible" }
+      ]
+    },
+
+    "description": {
+      "text": "Travaillez avec les meilleurs profils du **marché international** francophone et apprenez à déléguer vos tâches afin d’optimiser la croissance de votre entreprise."
+    }
+  },
+
+  "meeting": {
+    "cta": "Prendre rendez-vous"
+  },
+
+  "pages": {
+    "services": {
+      "outsourcing": {
+        "title": "Externalisation",
+        "subtitle": "Optimisez vos performances en déléguant l’essentiel",
+
+        "advantages": {
+          "list": [
+            {
+              "title": "Réduction des coûts opérationnels",
+              "description": "L’externalisation permet de diminuer les dépenses liées au recrutement, à la formation et aux infrastructures internes. Vous payez uniquement pour les services utilisés, sans charges fixes supplémentaires."
+            },
+            {
+              "title": "Accès à une expertise spécialisée",
+              "description": "Bénéficiez immédiatement de compétences pointues et de meilleures pratiques grâce à des professionnels spécialisés dans leur domaine, sans avoir à recruter ou former en interne."
+            },
+            {
+              "title": "Flexibilité et adaptabilité",
+              "description": "Adaptez rapidement vos ressources en fonction de votre activité, de vos projets ou de la saisonnalité, tout en gardant un contrôle total sur vos coûts."
+            },
+            {
+              "title": "Concentration sur votre cœur de métier",
+              "description": "En déléguant les tâches chronophages, vos équipes peuvent se concentrer sur les activités à forte valeur ajoutée, favorisant la croissance et la performance globale."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
