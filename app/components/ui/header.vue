@@ -5,6 +5,7 @@ import { getLangItems } from "~/tools/lang";
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
+
 const showHorizontalNav = breakpoints.greaterOrEqual("lg");
 const hideExtras = breakpoints.smallerOrEqual("sm");
 
@@ -130,6 +131,7 @@ addRouteMiddleware(() => {
 
         <div
           v-if="showHorizontalNav"
+          key="h"
           class="ml-20 mr-auto flex items-center gap-3"
         >
           <template v-for="(item, index) in items" :key="index">
@@ -147,7 +149,7 @@ addRouteMiddleware(() => {
           </template>
         </div>
 
-        <div v-else class="mx-auto"></div>
+        <span v-else key="v" class="mx-auto"></span>
 
         <div class="flex items-center gap-2">
           <UButton
@@ -165,14 +167,16 @@ addRouteMiddleware(() => {
             >
               <UButton
                 v-if="!$slots.default"
-                icon="i-lucide-globe"
                 color="light"
                 variant="ghost"
                 size="xl"
                 square
                 class="cursor-pointer"
               >
-                <u-icon name="" class="" />
+                <u-icon
+                  name="i-lucide-globe"
+                  :class="[textColor, 'text-2xl']"
+                />
               </UButton>
             </UDropdownMenu>
           </template>

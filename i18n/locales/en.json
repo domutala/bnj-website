@@ -1,1 +1,144 @@
-{}
+{
+  "cookies": {
+    "text": "To provide you with an optimal experience, we use cookies. They help us personalize content and understand how you use the site.",
+    "btn": "OK, got it"
+  },
+
+  "words": {
+    "on_this_page": "On this page",
+    "hire_me": "Hire me"
+  },
+
+  "services": {
+    "more": "Learn more",
+    "label": "Services",
+
+    "title": "The agency that connects you with the talent you need",
+    "description": "With BNJ Team Maker, outsourcing becomes a strategic growth lever. We find the most qualified profiles for you, ready to integrate into your team and help you reach your goals faster. You delegate, we place the best international talents. You save time, we bring you value.",
+
+    "list": [
+      {
+        "title": "Outsourcing",
+        "description": "Providing top talents for various missions (short, medium, or long term) while reducing your HR costs",
+        "objective": "Transform an aging frontend into a modern, high-performance interface.",
+        "icon": "i-lucide-external-link",
+        "code": "outsourcing"
+      },
+      {
+        "title": "Simplified management",
+        "description": "We invest capital and human resources in your company",
+        "objective": "Deliver reliable, efficient interfaces designed to last.",
+        "icon": "i-fluent-people-team-48-regular",
+        "code": "management"
+      },
+      {
+        "title": "Insurance",
+        "description": "Fast response in case of employee departure as well as future recruitments, with the aim of ensuring business continuity",
+        "icon": "i-material-symbols-light-verified-user-outline",
+        "code": "assurance"
+      },
+      {
+        "title": "Training",
+        "description": "Develop your employees’ skills with experts specialized in their field to improve productivity and strengthen team spirit",
+        "icon": "i-ph-book-open-text-light",
+        "code": "formation"
+      },
+
+      {
+        "title": "End-to-End Fullstack Development",
+        "description": "I handle projects from start to finish: Nuxt frontend, NestJS backend, database, integration, and optimization. I design complete and consistent architectures built for stability and scalability.",
+        "objective": "Deliver a complete, technically solid product ready for production.",
+        "icon": "i-mingcute-usb-flash-disk-line"
+      },
+      {
+        "title": "Technical Audit and Performance Optimization",
+        "description": "I thoroughly analyze your application (frontend and backend) to identify bottlenecks, architecture issues, code duplication, or performance weaknesses. I provide a clear, prioritized report and then apply the necessary optimizations.",
+        "objective": "Improve the quality, speed, and stability of your application.",
+        "icon": "i-lucide-laptop-minimal-check"
+      },
+      {
+        "title": "Automation, CI/CD, and Deployment",
+        "description": "I set up stable, automated deployment pipelines using GitHub Actions, GitLab CI, or Jenkins. Test automation, reliable builds, secure deployments, monitoring, and environment organization.",
+        "objective": "Make your releases faster, safer, and perfectly reproducible.",
+        "icon": "i-lucide-git-graph"
+      },
+      {
+        "title": "Dashboard and Business Tools Development",
+        "description": "I design simple and efficient internal tools: HRIS, document management, approval workflows, reporting, and custom business modules. I prioritize clarity, speed, and ease of use.",
+        "objective": "Improve your teams’ productivity with tools adapted to their reality.",
+        "icon": "i-lucide-tool-case"
+      }
+    ]
+  },
+
+  "home": {
+    "marquee": {
+      "title": "Our partners"
+    },
+
+    "hero": {
+      "text": "Outsource your team while reducing your costs in record time",
+      "cta": "Discover our offer"
+    },
+
+    "stats": {
+      "title": "Work easily with A-players who cost less than your interns",
+      "list": [
+        { "count": "+108", "title": "Custom recruitments" },
+        { "count": "+9", "title": "Partners who trust us" },
+        { "count": "+10", "title": "Available job offers" }
+      ]
+    },
+
+    "description": {
+      "text": "Work with the best profiles from the **international** French-speaking market and learn how to delegate your tasks to optimize your company’s growth."
+    }
+  },
+
+  "meeting": {
+    "cta": "Book a meeting"
+  },
+
+  "pages": {
+    "services": {
+      "outsourcing": {
+        "title": "Outsourcing",
+        "subtitle": "Optimize your performance by delegating what matters most",
+
+        "advantages": {
+          "list": [
+            {
+              "title": "Reduced operational costs",
+              "description": "Outsourcing helps lower expenses related to recruitment, training, and internal infrastructure. You pay only for the services you use, with no additional fixed costs."
+            },
+            {
+              "title": "Access to specialized expertise",
+              "description": "Immediately benefit from advanced skills and best practices thanks to professionals specialized in their field, without the need to hire or train internally."
+            },
+            {
+              "title": "Flexibility and adaptability",
+              "description": "Quickly adjust your resources based on your activity, projects, or seasonality, while maintaining full control over your costs."
+            },
+            {
+              "title": "Focus on your core business",
+              "description": "By delegating time-consuming tasks, your teams can focus on high-value activities, driving growth and overall performance."
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  "profiles": [
+    "Sales Representative",
+    "Versatile Assistant",
+    "Graphic Designer",
+    "Administrative Assistant",
+    "Growth Hacker",
+    "Copywriter",
+    "Community Manager",
+    "Customer Support Agent",
+    "Customer Success Manager",
+    "Business Developer"
+  ]
+}

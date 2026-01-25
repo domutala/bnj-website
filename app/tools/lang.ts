@@ -15,6 +15,7 @@ export function getLangItems() {
       label: l.name,
       icon: langFlags[l.code],
       checked: locale.value === l.code,
+      class: "cursor-pointer",
       onSelect(e: Event) {
         e.preventDefault();
         setLocale(l.code);
