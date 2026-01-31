@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="py-25 bg-black text-white w-full">
+  <section class="py-25 w-full">
     <div class="flex flex-col gap-4 w-full">
       <UMarquee
         pause-on-hover

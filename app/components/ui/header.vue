@@ -33,8 +33,10 @@ const items = ref<NavigationMenuItem[]>([
         return {
           label: $t(`services.list.${i}.title`),
           icon: $t(`services.list.${i}.icon`),
+          to: Use.localePath({
+            name: "services-" + $t(`services.list.${i}.code`),
+          }),
           // description: $t(`services.list.${i}.description`),
-          to: "/services/compos",
         };
       }),
     ],
@@ -47,7 +49,7 @@ const items = ref<NavigationMenuItem[]>([
 
   {
     label: "Carrières",
-    to: "https://github.com/nuxt/ui",
+    to: Use.localePath({ name: "careers" }),
   },
 
   {
@@ -110,12 +112,12 @@ addRouteMiddleware(() => {
 
 <template>
   <header
-    class="ui-header transition-all fixed w-full z-20"
+    class="ui-header transition-all fixed w-full z-100"
     :class="[
       textColor,
       hide ? '-top-full' : 'top-0',
       bgWhite
-        ? 'bg-white/35  shadow-sm backdrop-blur'
+        ? 'bg-white shadow-sm backdrop-blur'
         : color === 'white'
           ? 'bg-black/0 '
           : 'bg-white/0 ',
@@ -124,8 +126,8 @@ addRouteMiddleware(() => {
     <u-container class="max-w-425">
       <div class="flex items-center py-2">
         <nuxt-link :to="$localePath({ name: 'index' })" class="">
-          <div class="flex items-center gap-2 font-normal text-2xl">
-            <span class="font-black">BNJ</span> Team maker
+          <div class="flex items-center gap-2 font-normal text-2xl select-none">
+            <span class="font-black">BNJ</span> Team Maker
           </div>
         </nuxt-link>
 

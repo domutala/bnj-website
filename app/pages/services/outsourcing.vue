@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import ServicesOutsourcingProfit from "~/components/services/outsourcing/profit.vue";
-
 const { setColor } = useHeader();
 setColor("black");
 </script>
@@ -108,7 +106,7 @@ setColor("black");
             style="
               background: linear-gradient(
                 180deg,
-                var(--ui-primary),
+                var(--ui-color-primary-300),
                 rgba(187, 252, 3, 0)
               );
             "
@@ -118,7 +116,7 @@ setColor("black");
             style="
               background: linear-gradient(
                 180deg,
-                var(--ui-primary) 60%,
+                var(--ui-color-primary-300) 60%,
                 rgba(187, 252, 3, 0)
               );
             "
@@ -126,13 +124,14 @@ setColor("black");
         </div>
       </div>
 
-      <div class="w-full h- flex relative z-10">
+      <div class="w-full flex relative z-10">
         <u-container class="mt-60">
           <div class="max-w-200 px-5 mb-30">
-            <div class="text-xl mb-2">Externalisation</div>
+            <div class="text-xl mb-2 text-primary">
+              {{ $t("pages.services.outsourcing.hero.label") }}
+            </div>
             <h1 class="text-4xl md:text-6xl font-bold">
-              Placement des meilleurs talents à l'international pour booster la
-              croissance de votre entreprise.
+              {{ $t("pages.services.outsourcing.hero.title") }}
             </h1>
 
             <!-- <u-button
@@ -149,7 +148,25 @@ setColor("black");
       </div>
     </section>
 
-    <ServicesOutsourcingProfit />
+    <section class="pb-30">
+      <u-container>
+        <UPageGrid class="lg:grid-cols-4 gap-5">
+          <UPageCard
+            v-for="i in 4"
+            :key="i"
+            :title="
+              $t(`pages.services.outsourcing.advantages.list.${i - 1}.title`)
+            "
+            :description="
+              $t(
+                `pages.services.outsourcing.advantages.list.${i - 1}.description`,
+              )
+            "
+            class="shadow-xl border-primary-100 border"
+          />
+        </UPageGrid>
+      </u-container>
+    </section>
 
     <div class="text-center pb-15">
       <UButton
@@ -194,7 +211,7 @@ setColor("black");
 
       <section id="info" class="py-15">
         <u-container
-          class="bg-gray-100 rounded-2xl rounded-t-[3em] border border-primary/30"
+          class="bg-gray-100 rounded-2xl rounded-tl-[5em] border border-primary/30"
         >
           <div class="p-10 py-16">
             <div class="flex md:flex-row flex-col gap-5">
@@ -203,8 +220,8 @@ setColor("black");
                   class="size-25 md:size-50 overflow-hidden rounded-full relative border-t border border-default mr-10"
                 >
                   <u-avatar
-                    src="/images/partners/Julien_Picard.jpeg"
-                    alt="Julien Picard"
+                    :src="$t('testimonials.2.avatar')"
+                    :alt="$t('testimonials.2.name')"
                     class="size-full mx-auto object-top object-cover px-0"
                   />
                 </div>
@@ -214,15 +231,16 @@ setColor("black");
                 <p
                   class="text-lg md:text-3xl font-bold before:content-[open-quote] after:content-[close-quote]"
                 >
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Error incidunt sequi, aut autem recusandae culpa harum
-                  doloribus corrupti, aspernatur assumenda commodi, enim placeat
-                  similique vel nobis rem id tempora ducimus?
+                  {{ $t("testimonials.2.quote") }}
                 </p>
 
                 <div class="mt-5">
-                  <div class="">Benjamin Parienty</div>
-                  <div class="text-lg opacity-60">Team Marker</div>
+                  <div class="">
+                    {{ $t("testimonials.2.name") }}
+                  </div>
+                  <div class="text-lg opacity-60">
+                    {{ $t("testimonials.2.function") }}
+                  </div>
                 </div>
               </div>
             </div>

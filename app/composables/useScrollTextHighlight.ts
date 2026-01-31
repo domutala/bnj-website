@@ -46,7 +46,9 @@ export function useScrollTextHighlight(
       onBeforeBuild?.(target);
 
       cloneTarget.value = target.value.cloneNode(true) as HTMLElement;
-      rebuild(cloneTarget.value);
+
+      const content = cloneTarget.value.querySelector("[data-text-highlight]");
+      rebuild(content || cloneTarget.value);
 
       cloneTarget.value.style.position = "sticky";
       cloneTarget.value.style.top = "0";

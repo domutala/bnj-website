@@ -58,7 +58,7 @@
                 class="pointer-events-none absolute -left-px -top-6 z-10 h-24 w-4 bg-linear-to-r px-4 py-2 md:w-8 lg:w-24 from-black via-black"
               ></div>
 
-              <UMarquee :overlay="false">
+              <UMarquee :overlay="false" pause-on-hover>
                 <img
                   :src="'/images/partners/bja.png'"
                   loading="lazy"

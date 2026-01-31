@@ -2,7 +2,7 @@
 
 <template>
   <!-- w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 -->
-  <div class="relative w-full bg-black text-white py-30">
+  <section id="services" class="relative w-full bg-black text-white py-30">
     <div class="absolute inset-0 bg-primary/2.5"></div>
     <u-container class="relative">
       <div class="flex flex-wrap">
@@ -55,7 +55,7 @@
         </div>
       </div>
     </u-container>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">

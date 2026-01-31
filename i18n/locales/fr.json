@@ -78,7 +78,7 @@
 
     "hero": {
       "text": "Externalisez votre équipe en réduisant vos coûts dans un temps record",
-      "cta": "Découvrir notre formule"
+      "cta": "Nos services"
     },
 
     "stats": {
@@ -105,6 +105,11 @@
         "title": "Externalisation",
         "subtitle": "Optimisez vos performances en déléguant l’essentiel",
 
+        "hero": {
+          "label": "Externalisation",
+          "title": "Placement des meilleurs talents à l'international pour booster la croissance de votre entreprise."
+        },
+
         "advantages": {
           "list": [
             {
@@ -126,8 +131,153 @@
           ]
         }
       }
+    },
+
+    "career": {
+      "hero": {
+        "title": "Rejoignez une équipe qui valorise les talents et l’excellence humaine",
+        "subtitle": "Chez BNJ Team Maker, nous construisons des parcours professionnels durables en connectant les meilleurs talents à des projets ambitieux et porteurs de sens."
+      },
+      "whyUs": {
+        "title": "Pourquoi travailler avec nous ?",
+        "description": "Chez BNJ Team Maker, nous croyons que la réussite des entreprises passe avant tout par les femmes et les hommes qui les composent. Notre mission est de connecter les talents aux opportunités, tout en créant un environnement de travail sain, stimulant et évolutif.",
+        "extra": "Nous accompagnons des entreprises de toutes tailles dans l’externalisation et la structuration de leurs équipes, avec une approche humaine, transparente et orientée résultats."
+      },
+      "vision": {
+        "title": "Notre vision",
+        "items": [
+          "Valoriser les talents, quel que soit leur parcours ou leur localisation",
+          "Favoriser l’évolution professionnelle continue",
+          "Créer des collaborations durables et gagnant-gagnant",
+          "Allier performance, bien-être et impact positif"
+        ]
+      },
+      "profiles": {
+        "title": "Profils que nous recherchons",
+        "description": "Nous sommes constamment à la recherche de talents motivés et passionnés dans plusieurs domaines.",
+        "items": [
+          "Support client et relation client",
+          "Assistance administrative",
+          "Marketing digital et community management",
+          "Développement web et IT",
+          "Gestion de projet",
+          "Comptabilité et finance"
+        ],
+        "note": "Que vous soyez junior, confirmé ou expert, votre motivation et votre état d’esprit font la différence."
+      },
+      "benefits": {
+        "title": "Ce que nous offrons",
+        "items": {
+          "flexibility": {
+            "title": "Un cadre de travail flexible",
+            "description": "Nous favorisons un environnement de travail adaptable qui respecte votre équilibre personnel tout en garantissant la performance.",
+            "points": [
+              "Télétravail ou environnement hybride",
+              "Horaires adaptés selon les projets",
+              "Culture basée sur la confiance et l’autonomie"
+            ]
+          },
+          "projects": {
+            "title": "Des projets stimulants et valorisants",
+            "description": "Vous intervenez sur des missions concrètes et à fort impact, au sein d’environnements professionnels exigeants.",
+            "points": [
+              "Missions variées et à forte valeur ajoutée",
+              "Collaboration avec des entreprises locales et internationales",
+              "Environnements professionnels structurés"
+            ]
+          },
+          "support": {
+            "title": "Un accompagnement humain et structuré",
+            "description": "Nous vous accompagnons à chaque étape afin de garantir votre intégration, votre montée en compétences et votre réussite.",
+            "points": [
+              "Onboarding clair et humain",
+              "Suivi régulier et feedback constructif",
+              "Possibilités d’évolution selon vos performances"
+            ]
+          },
+          "recognition": {
+            "title": "Une reconnaissance à la hauteur de votre valeur",
+            "description": "Votre engagement et vos résultats sont reconnus de manière transparente, équitable et durable.",
+            "points": [
+              "Rémunération juste et transparente",
+              "Valorisation des compétences et des résultats",
+              "Opportunités long terme"
+            ]
+          }
+        }
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "items": [
+          {
+            "title": "Engagement",
+            "description": "Nous nous investissons pleinement dans chaque collaboration."
+          },
+          {
+            "title": "Respect",
+            "description": "Nous construisons des relations professionnelles saines et équilibrées."
+          },
+          {
+            "title": "Excellence",
+            "description": "Nous recherchons constamment la qualité et l’amélioration continue."
+          },
+          {
+            "title": "Transparence",
+            "description": "Nous privilégions une communication claire et honnête."
+          }
+        ]
+      },
+      "recruitmentProcess": {
+        "title": "Processus de recrutement",
+        "steps": [
+          {
+            "title": "Dépôt de candidature",
+            "description": "Soumettez votre CV et lettre de motivation via notre formulaire en ligne simple et rapide."
+          },
+          {
+            "title": "Étude de votre profil",
+            "description": "Notre équipe examine attentivement chaque candidature pour identifier les talents et expériences correspondant à nos besoins."
+          },
+          {
+            "title": "Entretien",
+            "description": "Rencontrez notre équipe en visioconférence ou par téléphone pour échanger sur vos compétences, vos motivations et vos objectifs."
+          },
+          {
+            "title": "Validation et intégration",
+            "description": "Une fois sélectionné, nous vous accompagnons dans votre intégration afin de vous mettre dans les meilleures conditions pour réussir."
+          }
+        ],
+        "note": "Nous privilégions un processus simple, rapide et humain."
+      },
+      "apply": {
+        "title": "Candiature spontanée",
+        "description": "Vous souhaitez rejoindre une équipe dynamique et ambitieuse ?",
+        "cta": "Envoyez-nous votre candidature via notre formulaire en ligne.",
+        "footer": "Nous étudions chaque profil avec attention."
+      }
     }
   },
+
+  "testimonials": [
+    {
+      "name": "Julien Picard",
+      "function": "Directeur commercial",
+      "avatar": "/images/partners/Julien_Picard.jpeg",
+      "quote": "Benjamin nous a mis en relation avec Ibrahima, spécialiste en lead generation. Il alimente quotidiennement notre CRM avec de nouveaux prospects. Depuis, nos commerciaux obtiennent plus de rendez-vous et notre chiffre d’affaires a augmenté !"
+    },
+    {
+      "name": "Mathieu Dumont",
+      "function": "SOrganisateur de voyages",
+      "avatar": "/images/partners/Mathieu_Dumont.jpeg",
+      "quote": "Dans mon activité, une bonne gestion des réseaux sociaux est essentielle. Cependant, cela me demandait énormément de temps, et recruter un community manager en France s'avérait onéreux. Grâce à Benjamin, j’ai pu collaborer avec Domoina qui gère toute ma communication et qui a tous les jours des nouvelles idées de création !"
+    },
+    {
+      "name": "Sara Vallée",
+      "function": "SConsultante en recrutement",
+      "avatar": "/images/partners/Sara_Vallée.jpeg",
+      "quote": "Grâce à BNJ Team Maker, je travaille avec Julius, qui gère l’ensemble de mon sourcing. Cette solution me permet de me concentrer pleinement sur la prospection et le suivi de mes clients, afin d’offrir un service de qualité supérieure et à forte valeur ajoutée."
+    }
+  ],
 
   "profiles": [
     "Commerical",

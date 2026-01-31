@@ -38,6 +38,7 @@
               variant="soft"
               size="xl"
               class="rounded-full p-3 px-5 cursor-pointer"
+              href="#services"
             >
               {{ $t("home.hero.cta") }}
             </u-button>
