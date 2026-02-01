@@ -6,7 +6,10 @@ const { setColor } = useHeader();
 setColor("white");
 </script>
 <template>
-  <section class="relative min-h-180 bg-primary-950 text-white">
+  <ui-section
+    heade-color="white"
+    class="relative min-h-180 bg-primary-950 text-white"
+  >
     <div
       class="absolute inset-0 overflow-hidden pointer-events-none"
       style="height: 841px"
@@ -93,7 +96,7 @@ setColor("white");
         />
       </UPageGrid>
     </u-container>
-  </section>
+  </ui-section>
 
   <div class="relative w-full">
     <div
