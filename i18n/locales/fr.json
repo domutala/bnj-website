@@ -258,8 +258,8 @@
     },
 
     "contact": {
-      "title": "Une question, un projet ou besoin d’informations ?",
-      "description": "Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.",
+      "title": "Parlons de votre projet et construisons une collaboration durable",
+      "description": "Une question, un besoin spécifique ou un projet d’externalisation ? Notre équipe est à votre écoute pour vous accompagner à chaque étape.",
 
       "items": {
         "firstName": "Prénom",
@@ -275,6 +275,28 @@
         "21-250": "Entre 20 et 250 employés",
         "251-2000": "Entre 250 et 2000 employés",
         "+2000": "plus de 2000 employés"
+      },
+
+      "contactReasons": {
+        "title": "Pourquoi nous contacter ?",
+        "items": [
+          {
+            "title": "Externalisation de vos équipes",
+            "description": "Vous souhaitez déléguer certaines fonctions de votre entreprise tout en garantissant performance, fiabilité et flexibilité. Nous vous accompagnons dans la mise en place d’équipes adaptées à vos objectifs."
+          },
+          {
+            "title": "Besoin de talents qualifiés",
+            "description": "Nous identifions et mettons à votre disposition des profils compétents et motivés, capables de s’intégrer rapidement à votre organisation et à votre culture."
+          },
+          {
+            "title": "Demande d’information",
+            "description": "Vous avez des questions sur nos services, nos méthodes de travail ou nos modalités de collaboration. Notre équipe vous apporte des réponses claires et transparentes."
+          },
+          {
+            "title": "Partenariat",
+            "description": "Vous souhaitez collaborer avec BNJ Team Maker en tant que partenaire ou prestataire. Discutons ensemble des opportunités de collaboration."
+          }
+        ]
       },
 
       "errors": {
@@ -309,6 +331,84 @@
       "submit": "Envoyer",
 
       "success": "**Merci pour votre message !** \n\nNous l’avons bien reçu et notre équipe reviendra vers vous dans les meilleurs délais.\n\nÀ très bientôt."
+    },
+
+    "apply": {
+      "title": "Candidature spontanée",
+
+      "items": {
+        "availability": "Votre disponibilité",
+        "desiredGrossSalary": "Salaire souhaité (brut par an)",
+        "educationLevel": "Niveau d'étude",
+        "motivation": "Texte de motivation",
+        "cv": "Déposer ou choisir un fichier",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email",
+        "phone": "Numéro de téléphone",
+        "acceptCondition": "J'ai lu et déclare accepter les conditions d'utilisation"
+      },
+
+      "availability": {
+        "immediately": "Immédiatement",
+        "1month": "Sous 1 moins",
+        "2mois": "Sous 2 mois",
+        "3mois": "Sous 3 mois",
+        "other": "Autres"
+      },
+
+      "educationLevel": {
+        "none": "Aucun diplôme",
+        "bepCap": "BEP, CAP ou équivalent",
+        "baccalaureate": "Baccalauréat (bac +0)",
+        "bacPlus2": "DUT, BTS, diplôme d’État ou équivalent (bac +2)",
+        "bacPlus3": "Licence, Bachelor ou équivalent (bac +3)",
+        "bacPlus4": "Master 1 ou équivalent (bac +4)",
+        "bacPlus5": "Master, diplôme d’ingénieur ou équivalent (bac +5)",
+        "doctorate": "Doctorat ou équivalent (bac +8 et plus)"
+      },
+
+      "errors": {
+        "firstName": {
+          "required": "Le prénom est obligatoire",
+          "invalid": "Le prénom doit être une chaîne de caractères",
+          "min": "Le prénom doit contenir au moins 2 caractères"
+        },
+        "lastName": {
+          "required": "Le nom est obligatoire",
+          "invalid": "Le nom doit être une chaîne de caractères",
+          "min": "Le nom doit contenir au moins 2 caractères"
+        },
+        "email": {
+          "required": "L’adresse email est obligatoire",
+          "invalid": "Veuillez saisir une adresse email valide"
+        },
+        "phone": {
+          "required": "Le numéro de téléphone est obligatoire",
+          "invalid": "Veuillez saisir un numéro de téléphone valide"
+        },
+        "desiredGrossSalary": {
+          "required": "Le salaire brut souhaité est requis.",
+          "invalid": "Veuillez renseigner un montant valide."
+        },
+        "educationLevel": {
+          "required": "Veuillez sélectionner votre niveau d’étude."
+        },
+        "availability": {
+          "required": "Veuillez renseigner votre disponibilité"
+        },
+        "acceptCondition": {
+          "required": "Vous devez accepter les conditions d'utilisations."
+        },
+        "cv": {
+          "size": "Le fichier ne doit pas dépasser 10 Mo",
+          "type": "Le fichier doit être un PDF",
+          "required": "Un fichier est requis"
+        }
+      },
+
+      "submit": "Envoyer ma candidature",
+      "success": "Merci pour votre candidature. Nous avons bien reçu vos informations et notre équipe va les analyser avec attention. Si votre profil correspond à nos opportunités actuelles ou futures, nous vous contacterons pour la suite du processus."
     }
   },
 

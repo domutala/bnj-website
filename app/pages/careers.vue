@@ -45,6 +45,7 @@ import UiCareersWhy from "~/components/careers/why.vue";
             variant="solid"
             size="xl"
             class="rounded-full p-3 px-5 cursor-pointer"
+            :to="$localePath({ name: 'apply' })"
           >
             <span class="text-black"> Rejoignez-nous </span>
           </u-button>
@@ -194,6 +195,7 @@ import UiCareersWhy from "~/components/careers/why.vue";
           variant="solid"
           size="xl"
           class="rounded-full p-3 px-5 cursor-pointer"
+          :to="$localePath({ name: 'apply' })"
         >
           <span class="">
             {{ $t("pages.career.apply.title") }}
