@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
+import { getLangItems } from "~/tools/lang";
 
 const appConfig = useAppConfig();
 </script>
@@ -31,12 +32,26 @@ const appConfig = useAppConfig();
             </a>
           </div>
 
-          <a
-            href="https://www.linkedin.com/company/bnjteammaker/"
-            target="_blank"
-          >
-            <u-icon :name="`i-simple-icons-linkedin`" class="size-6" />
-          </a>
+          <div class="flex items-center gap-2">
+            <UDropdownMenu
+              :items="[getLangItems()]"
+              :content="{ align: 'start', collisionPadding: 12 }"
+            >
+              <div class="cursor-pointer">
+                <u-icon
+                  :name="`i-lucide-languages`"
+                  class="size-6 text-black"
+                />
+              </div>
+            </UDropdownMenu>
+
+            <a
+              href="https://www.linkedin.com/company/bnjteammaker/"
+              target="_blank"
+            >
+              <u-icon :name="`i-simple-icons-linkedin`" class="size-6" />
+            </a>
+          </div>
         </div>
 
         <div class="flex flex-wrap justify-between gap-20 w-">

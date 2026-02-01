@@ -138,7 +138,7 @@ addRouteMiddleware(() => {
           />
 
           <template v-if="!hideExtras">
-            <UDropdownMenu
+            <!-- <UDropdownMenu
               :items="[getLangItems()]"
               :content="{ align: 'end', collisionPadding: 12 }"
             >
@@ -155,7 +155,7 @@ addRouteMiddleware(() => {
                   :class="[textColor, 'text-2xl']"
                 />
               </UButton>
-            </UDropdownMenu>
+            </UDropdownMenu> -->
           </template>
         </div>
       </div>

@@ -21,8 +21,11 @@ onMounted(() => {});
       <!-- <div class="h-screen relative"></div> -->
       <div class="flex items-center mx-auto">
         <u-container class="py-36">
-          <div class="text-center px-10">
-            <UIcon name="i-lucide-user-round-check" class="size-24 mb-20" />
+          <div class="text-center px-10 flex items-center ga-5 justify-center">
+            <UIcon name="i-lucide-user-star" class="size-24 mb-20" />
+            <!-- <UIcon name="i-lucide-star" class="size-20 mb-20" />
+            <UIcon name="i-lucide-star" class="size-24 mb-20" />
+            <UIcon name="i-lucide-star" class="size-20 mb-20" /> -->
           </div>
           <div class="relative">
             <p

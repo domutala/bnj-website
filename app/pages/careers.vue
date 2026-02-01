@@ -108,7 +108,7 @@ import UiCareersWhy from "~/components/careers/why.vue";
 
   <section class="w-full bg-primary-950 text-white py-30">
     <u-container>
-      <UIcon name="i-lucide-user-star" class="size-18 mb-5" />
+      <UIcon name="i-lucide-users-round" class="size-18 mb-5" />
       <h2 class="text-3xl font-black">
         {{ $t("pages.career.profiles.title") }}
       </h2>
