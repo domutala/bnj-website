@@ -136,7 +136,9 @@
     "career": {
       "hero": {
         "title": "Rejoignez une équipe qui valorise les talents et l’excellence humaine",
-        "subtitle": "Chez BNJ Team Maker, nous construisons des parcours professionnels durables en connectant les meilleurs talents à des projets ambitieux et porteurs de sens."
+        "subtitle": "Chez BNJ Team Maker, nous construisons des parcours professionnels durables en connectant les meilleurs talents à des projets ambitieux et porteurs de sens.",
+        "cta": "Candidature spontanée",
+        "cta2": "Nos offres d'emploi"
       },
       "whyUs": {
         "title": "Pourquoi travailler avec nous ?",

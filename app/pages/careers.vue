@@ -47,7 +47,9 @@ import UiCareersWhy from "~/components/careers/why.vue";
             class="rounded-full p-3 px-5 cursor-pointer"
             :to="$localePath({ name: 'apply' })"
           >
-            <span class="text-black"> Rejoignez-nous </span>
+            <span class="text-black">
+              {{ $t("pages.career.hero.cta") }}
+            </span>
           </u-button>
 
           <u-button
@@ -60,7 +62,7 @@ import UiCareersWhy from "~/components/careers/why.vue";
           >
             <span class="text-black flex items-center gap-2">
               <u-icon name="i-simple-icons-linkedin" size="20" />
-              Nos offres d'emploi
+              {{ $t("pages.career.hero.cta2") }}
             </span>
           </u-button>
         </div>
