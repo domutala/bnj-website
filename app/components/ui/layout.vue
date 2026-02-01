@@ -1,14 +1,13 @@
 <script lang="ts" setup>
 const appConfig = useAppConfig();
 const title = appConfig.site.name;
-const description = appConfig.site.description;
-
+const i18n = useI18n();
 useSeoMeta({
-  title,
-  description,
-  ogTitle: title,
-  ogDescription: description,
-  ogImage: "https://ui.nuxt.com/assets/templates/nuxt/starter-light.png",
+  title: `${title} - ${i18n.t("site.description")}`,
+  description: i18n.t("site.description"),
+  ogTitle: `${title} - ${i18n.t("site.description")}`,
+  ogDescription: i18n.t("site.description"),
+  // ogImage: "https://ui.nuxt.com/assets/templates/nuxt/starter-light.png",
 });
 
 onMounted(() => {

@@ -1,4 +1,8 @@
 {
+  "site": {
+    "description": "Talent placement agency"
+  },
+
   "cookies": {
     "text": "To provide you with the best possible experience, we use cookies. They help us personalize content and understand how you use our site.",
     "btn": "OK, got it"

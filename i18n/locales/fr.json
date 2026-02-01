@@ -1,4 +1,8 @@
 {
+  "site": {
+    "description": "Agence de placement de talents"
+  },
+
   "cookies": {
     "text": "Pour vous offrir une expérience optimale, nous utilisons des cookies. Ils nous aident à personnaliser le contenu et à comprendre comment vous utilisez le site.",
     "btn": "OK, compris"

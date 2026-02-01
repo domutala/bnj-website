@@ -5,8 +5,8 @@ export default defineAppConfig({
   },
 
   site: {
-    name: "BNJ Teammaker",
-    description: "Personal brand website design",
+    name: "BNJ Team Maker",
+    description: "Agence de placement de talents",
   },
 
   ui: {
