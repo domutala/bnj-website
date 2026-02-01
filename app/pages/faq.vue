@@ -1,54 +1,6 @@
 <script lang="ts" setup>
-import type { FormSubmitEvent } from "@nuxt/ui";
-import * as z from "zod";
-import MarkdownIt from "markdown-it";
-
 const { setColor } = useHeader();
 setColor("black");
-
-const md = new MarkdownIt();
-const i18n = useI18n();
-const companySize = ["-20", "21-250", "251-2000", "+2000"];
-const success = ref(false);
-
-const schema = z.object({
-  firstName: z
-    .string(i18n.t("pages.contact.errors.firstName.required"))
-    .min(2, i18n.t("pages.contact.errors.firstName.min")),
-  lastName: z
-    .string(i18n.t("pages.contact.errors.lastName.required"))
-    .min(2, i18n.t("pages.contact.errors.lastName.required")),
-  email: z.email(i18n.t("pages.contact.errors.email.invalid")),
-
-  companyName: z
-    .string(i18n.t("pages.contact.errors.companyName.required"))
-    .min(2, i18n.t("pages.contact.errors.companyName.required")),
-  companySize: z.enum(
-    companySize,
-    i18n.t("pages.contact.errors.companySize.required"),
-  ),
-
-  message: z
-    .string(i18n.t("pages.contact.errors.message.required"))
-    .min(10, i18n.t("pages.contact.errors.message.min"))
-    .max(1000, i18n.t("pages.contact.errors.message.max")),
-});
-
-type Schema = z.output<typeof schema>;
-
-const state = reactive<Partial<Schema>>({
-  firstName: undefined,
-  lastName: undefined,
-  email: undefined,
-  companyName: undefined,
-  companySize: undefined,
-  message: undefined,
-});
-
-const toast = useToast();
-async function onSubmit(event: FormSubmitEvent<Schema>) {
-  success.value = true;
-}
 </script>
 
 <template>
