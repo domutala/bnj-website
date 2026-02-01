@@ -19,7 +19,7 @@ onMounted(() => {});
 </script>
 
 <template>
-  <section class="relative">
+  <ui-section heade-color="white" class="relative">
     <div
       ref="container"
       class="flex items-center h-screen bg-primary-950 text-white"
@@ -41,5 +41,5 @@ onMounted(() => {});
         </u-container>
       </div>
     </div>
-  </section>
+  </ui-section>
 </template>

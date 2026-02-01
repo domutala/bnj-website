@@ -19,7 +19,7 @@ const testimonials = ref([
 </script>
 
 <template>
-  <section class="py-20 bg-gray-50 w-full">
+  <ui-section heade-color="black" class="py-20 bg-gray-50 w-full">
     <u-container>
       <UPageColumns class="gap-4 space-y-4">
         <UPageCard
@@ -43,5 +43,5 @@ const testimonials = ref([
         </UPageCard>
       </UPageColumns>
     </u-container>
-  </section>
+  </ui-section>
 </template>

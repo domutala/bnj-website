@@ -7,16 +7,19 @@ import UiHomeHero from "~/components/home/hero.vue";
 import UiHomeCeo from "~/components/home/ceo.vue";
 import UiHomeStats from "~/components/home/stats.vue";
 import UiHomeProfile from "~/components/home/profile.vue";
+
+const { setColor } = useHeader();
+setColor("white");
 </script>
 
 <template>
   <div class="relative flex flex-col items-center justify-center">
-    <div class="w-full bg-black text-white">
+    <ui-section class="w-full bg-black text-white" heade-color="white">
       <UiHomeHero />
       <UiHomeMarquee />
       <UiHomeProfile />
       <UiHomeDescription class="z-49" />
-    </div>
+    </ui-section>
 
     <div class="relative w-full">
       <div

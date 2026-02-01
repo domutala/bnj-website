@@ -12,7 +12,7 @@ const swiper = useSwiper(containerRef, {
 </script>
 
 <template>
-  <section class="py-32 bg-black text-white w-full">
+  <ui-section heade-color="white" class="py-32 bg-black text-white w-full">
     <u-container class="mb-14">
       <div class="text-center">
         <!-- <u-icon name="i-lucide-crown" size="92" class="text-primary mb-3" /> -->
@@ -85,5 +85,5 @@ const swiper = useSwiper(containerRef, {
         </swiper-container>
       </u-container>
     </ClientOnly>
-  </section>
+  </ui-section>
 </template>

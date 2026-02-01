@@ -4,7 +4,7 @@ import * as z from "zod";
 import MarkdownIt from "markdown-it";
 
 const { setColor } = useHeader();
-setColor("white");
+setColor("black");
 
 const md = new MarkdownIt();
 const i18n = useI18n();

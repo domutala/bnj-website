@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import UiHomeProfile from "~/components/home/profile.vue";
 import UiCareersWhy from "~/components/careers/why.vue";
+
+const { setColor } = useHeader();
+setColor("white");
 </script>
 <template>
   <section class="relative min-h-180 bg-primary-950 text-white">
@@ -106,7 +109,10 @@ import UiCareersWhy from "~/components/careers/why.vue";
     ></div>
   </div>
 
-  <section class="w-full bg-primary-950 text-white py-30">
+  <ui-section
+    heade-color="white"
+    class="w-full bg-primary-950 text-white py-30"
+  >
     <u-container>
       <UIcon name="i-lucide-users-round" class="size-18 mb-5" />
       <h2 class="text-3xl font-black">
@@ -118,9 +124,9 @@ import UiCareersWhy from "~/components/careers/why.vue";
       </p>
     </u-container>
     <UiHomeProfile class="py-0! mt-15" />
-  </section>
+  </ui-section>
 
-  <section class="pb-30 bg-primary-950 text-white">
+  <ui-section heade-color="white" class="pb-30 bg-primary-950 text-white">
     <u-container>
       <h2 class="text-2xl md:text-4xl font-bold mb-5">
         {{ $t("pages.career.values.title") }}
@@ -140,9 +146,9 @@ import UiCareersWhy from "~/components/careers/why.vue";
         />
       </UPageGrid>
     </u-container>
-  </section>
+  </ui-section>
 
-  <section class="py-30">
+  <ui-section heade-color="black" class="py-30">
     <u-container class="max-w-220">
       <h2 class="text-3xl">
         {{ $t("pages.career.recruitmentProcess.title") }}
@@ -179,9 +185,9 @@ import UiCareersWhy from "~/components/careers/why.vue";
         </template>
       </UAccordion>
     </u-container>
-  </section>
+  </ui-section>
 
-  <section class="w-full bg-white text-black pb-30">
+  <ui-section heade-color="black" class="w-full bg-white text-black pb-30">
     <div class="text-center">
       <h2 class="text-2xl md:text-4xl font-bold">
         {{ $t("pages.career.apply.description") }}
@@ -219,5 +225,5 @@ import UiCareersWhy from "~/components/careers/why.vue";
         </u-button>
       </div>
     </div>
-  </section>
+  </ui-section>
 </template>

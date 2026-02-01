@@ -2,11 +2,14 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 import { getLangItems } from "~/tools/lang";
 
-const appConfig = useAppConfig();
+const { lang } = useLang();
 </script>
 
 <template>
-  <div class="bg-linear-to-br from-primary-200 from-32% to-white to-87% w-full">
+  <ui-section
+    heade-color="black"
+    class="bg-linear-to-br from-primary-200 from-32% to-white to-87% w-full"
+  >
     <UFooter
       class="relative text-black"
       :ui="{
@@ -33,18 +36,6 @@ const appConfig = useAppConfig();
           </div>
 
           <div class="flex items-center gap-2">
-            <UDropdownMenu
-              :items="[getLangItems()]"
-              :content="{ align: 'start', collisionPadding: 12 }"
-            >
-              <div class="cursor-pointer">
-                <u-icon
-                  :name="`i-lucide-languages`"
-                  class="size-6 text-black"
-                />
-              </div>
-            </UDropdownMenu>
-
             <a
               href="https://www.linkedin.com/company/bnjteammaker/"
               target="_blank"
@@ -97,10 +88,10 @@ const appConfig = useAppConfig();
       <template #right> </template>
 
       <template #bottom>
-        <div class="w-full px-m lg:px-2xl pointer-events-none">
-          <div class="w-full justify-center">
+        <div class="w-full px-m lg:px-2xl">
+          <div class="w-10/12 mx-auto">
             <div
-              class="mask-[url(/images/logo-big.svg)] mask-no-repeat mask-contain mask- bg-primary-950 w-10/12 mx-auto"
+              class="mask-[url(/images/logo-big.svg)] mask-no-repeat mask-contain mask- bg-primary-950 w-full pointer-events-none"
             >
               <img
                 src="/images/logo-big.svg"
@@ -108,9 +99,24 @@ const appConfig = useAppConfig();
                 class="w-full object-contain opacity-0"
               />
             </div>
+
+            <div class="py-5 flex items-center">
+              <UDropdownMenu
+                :items="[getLangItems()]"
+                :content="{ align: 'start', collisionPadding: 12 }"
+              >
+                <div class="cursor-pointer flex items-center gap-1">
+                  <u-icon :name="`i-lucide-globe`" class="size-5 text-black" />
+                  {{ lang?.name }}
+                </div>
+              </UDropdownMenu>
+
+              <div class="mx-auto"></div>
+              © {{ new Date().getFullYear() }} BNJ Team Maker
+            </div>
           </div>
         </div>
       </template>
     </UFooter>
-  </div>
+  </ui-section>
 </template>

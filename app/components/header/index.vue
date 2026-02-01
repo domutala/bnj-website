@@ -1,14 +1,16 @@
-<script setup lang="ts">
+<script lang="ts" setup>
+import {
+  breakpointsTailwind,
+  useBreakpoints,
+  useWindowScroll,
+} from "@vueuse/core";
 import type { NavigationMenuItem } from "@nuxt/ui";
-import { useWindowScroll } from "@vueuse/core";
-import { getLangItems } from "~/tools/lang";
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 
 const breakpoints = useBreakpoints(breakpointsTailwind);
-
 const showHorizontalNav = breakpoints.greaterOrEqual("lg");
 const hideExtras = breakpoints.smallerOrEqual("sm");
 
+const { color } = useHeader();
 const yDir = ref<"bottom" | "top">();
 const { y, directions } = useWindowScroll({
   onScroll(e) {
@@ -20,11 +22,10 @@ const { y, directions } = useWindowScroll({
   },
 });
 
-const { color, setColor } = useHeader();
-
 const i18n = useI18n();
 const items = ref<NavigationMenuItem[]>([
   {
+    code: "services",
     label: i18n.t("services.label"),
     to: "/services",
     exact: true,
@@ -53,6 +54,7 @@ const items = ref<NavigationMenuItem[]>([
   },
 
   {
+    code: "ressurces",
     label: "Ressurces",
     to: "/docs/components",
     exact: true,
@@ -73,33 +75,28 @@ const items = ref<NavigationMenuItem[]>([
   },
 ]);
 
-const bgWhite = computed(() => y.value !== 0 && yDir.value === "top");
+const open = ref<{ [key: string]: boolean }>({});
 const hide = computed(() => y.value !== 0 && yDir.value !== "top");
+const _color = computed(() => {
+  const opacity = y.value === 0 ? 0 : 10;
 
-const textColor = computed(() => {
-  return bgWhite.value || color.value === "black" ? "text-black" : "text-white";
-});
-
-addRouteMiddleware(() => {
-  setColor("white");
+  return color.value === "white"
+    ? `bg-black/${opacity} text-white`
+    : `bg-white/${opacity} text-black`;
 });
 </script>
 
 <template>
   <header
-    class="ui-header transition-all fixed w-full z-100"
+    class="fixed z-100 w-full h-(--ui-header-height) flex items-center transition-all"
     :class="[
-      textColor,
+      _color,
       hide ? '-top-full' : 'top-0',
-      bgWhite
-        ? 'bg-white shadow-sm backdrop-blur'
-        : color === 'white'
-          ? 'bg-black/0 '
-          : 'bg-white/0 ',
+      { 'backdrop-blur-3xl': y !== 0 },
     ]"
   >
     <u-container class="max-w-425">
-      <div class="flex items-center py-2">
+      <div class="flex items-center">
         <nuxt-link :to="$localePath({ name: 'index' })" class="">
           <div class="flex items-center gap-2 font-normal text-2xl select-none">
             <span class="font-black">BNJ</span> Team Maker
@@ -108,24 +105,56 @@ addRouteMiddleware(() => {
 
         <div
           v-if="showHorizontalNav"
-          key="h"
-          class="ml-20 mr-auto flex items-center gap-3"
+          class="flex items-center gap-3 ml-20 mr-auto"
         >
           <template v-for="(item, index) in items" :key="index">
             <nuxt-link v-if="!item.children" :to="item.to">
               {{ item.label }}
             </nuxt-link>
 
-            <UDropdownMenu v-else :items="item.children">
-              <div class="flex items-center gap-2 cursor-pointer">
-                {{ item.label }}
+            <UPopover
+              v-else
+              :ui="{
+                content: [
+                  'backdrop-blur-3xl ring-primary/15 group',
+                  color === 'black'
+                    ? 'bg-black/7 text-black'
+                    : 'bg-white/7 text-white',
+                ],
+              }"
+              :content="{ sideOffset: 25 }"
+              mode="hover"
+              v-model="open[item.code]"
+            >
+              <template #default="{ open: isOpen }">
+                <div class="flex items-center gap-2 w-max cursor-pointer">
+                  {{ item.label }} {{ open[item.code] }}
 
-                <u-icon name="i-lucide-chevron-down" />
-              </div>
-            </UDropdownMenu>
+                  <u-icon
+                    name="i-lucide-chevron-down"
+                    class="transition"
+                    :class="{ 'rotate-180': isOpen }"
+                  />
+                </div>
+              </template>
+
+              <template #content>
+                <div class="max-w-150 p-7">
+                  <nuxt-link
+                    v-for="(link, l) in item.children"
+                    :key="l"
+                    :to="link.to"
+                    class="text-3xl transition hover:opacity-100 group-hover:opacity-45 flex items-center gap-2 mb-2"
+                    @click="open[item.code] = false"
+                  >
+                    <u-icon v-if="link.icon" :name="link.icon" class="size-5" />
+                    <span>{{ link.label }}</span>
+                  </nuxt-link>
+                </div>
+              </template>
+            </UPopover>
           </template>
         </div>
-
         <span v-else key="v" class="mx-auto"></span>
 
         <div class="flex items-center gap-2">

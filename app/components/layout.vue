@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import UiHeader from "~/components/header/index.vue";
+import UiFooter from "~/components/footer.vue";
+
 const appConfig = useAppConfig();
 const title = appConfig.site.name;
 const i18n = useI18n();
