@@ -58,40 +58,12 @@ const items = ref<NavigationMenuItem[]>([
     exact: true,
     children: [
       {
-        label: "Link",
-        icon: "i-lucide-file-text",
-        description: "Use NuxtLink with superpowers.",
-        to: "/docs/components/link",
+        label: "FAQ",
+        to: Use.localePath({ name: "faq" }),
       },
-      {
-        label: "Modal",
-        icon: "i-lucide-file-text",
-        description: "Display a modal within your application.",
-        to: "/docs/components/modal",
-      },
-      {
-        label: "NavigationMenu",
-        icon: "i-lucide-file-text",
-        description: "Display a list of links.",
-        to: "/docs/components/navigation-menu",
-      },
-      {
-        label: "Pagination",
-        icon: "i-lucide-file-text",
-        description: "Display a list of pages.",
-        to: "/docs/components/pagination",
-      },
-      {
-        label: "Popover",
-        icon: "i-lucide-file-text",
-        description:
-          "Display a non-modal dialog that floats around a trigger element.",
-        to: "/docs/components/popover",
-      },
+
       {
         label: "Progress",
-        icon: "i-lucide-file-text",
-        description: "Show a horizontal bar to indicate task progression.",
         to: "/docs/components/progress",
       },
     ],

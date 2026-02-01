@@ -411,6 +411,53 @@
 
       "submit": "Envoyer ma candidature",
       "success": "Merci pour votre candidature. Nous avons bien reçu vos informations et notre équipe va les analyser avec attention. Si votre profil correspond à nos opportunités actuelles ou futures, nous vous contacterons pour la suite du processus."
+    },
+
+    "faq": {
+      "description": "Découvrez nos réponses aux questions les plus fréquentes concernant nos services de recrutement.",
+
+      "items": [
+        {
+          "question": "Pourquoi externaliser le recrutement de mon entreprise ?",
+          "response": "L’externalisation vous permet de gagner du temps, d’accéder à des talents hautement qualifiés à l’international et de réduire vos coûts en ressources humaines. En confiant cette tâche à une agence de placement spécialisée comme BNJ Talent Maker, vous bénéficiez d’une expertise pointue pour identifier, évaluer et intégrer les meilleurs profils, sans avoir à gérer un processus chronophage en interne."
+        },
+        {
+          "question": "Comment fonctionne une agence de placement comme BNJ Team Maker ?",
+          "response": "Une agence de placement agit comme un intermédiaire entre les entreprises et les talents. Chez BNJ Team Maker, nous analysons vos besoins, sélectionnons les meilleurs candidats grâce à notre réseau et notre expertise en sourcing, et vous accompagnons dans leur intégration. Notre objectif est de vous fournir des profils adaptés, en France et à l’international, que ce soit pour des missions ponctuelles ou des postes à long terme."
+        },
+        {
+          "question": "Combien coûte une agence de placement ?",
+          "response": "Le coût d’une agence de recrutement varie selon plusieurs critères : la complexité du poste à pourvoir, le niveau d’expérience recherché, la durée de la mission et les services associés (audit RH, formation, garantie de remplacement, etc.).Chez BNJ Talent Maker, nous proposons des solutions adaptées à votre budget et à vos objectifs, avec un modèle tarifaire transparent."
+        },
+        {
+          "question": "Quels types de profils puis-je externaliser avec BNJ Talent Maker ?",
+          "response": "Nous recrutons des talents dans divers domaines, allant des fonctions support (RH, finance, administration) aux profils plus techniques (développeurs, ingénieurs, spécialistes en marketing digital, etc.). Notre expertise nous permet de sourcer aussi bien des freelances, des consultants que des collaborateurs à temps plein, en fonction de vos besoins et de votre secteur d’activité."
+        },
+        {
+          "question": "Quels sont les avantages d’une externalisation des talents ?",
+          "response": "Faire appel à une agence d’externalisation comme BNJ Talent Maker vous permet de :Réduire vos coûts de recrutement et de gestion RH.Accéder rapidement aux compétences dont vous avez besoin.Gagner en flexibilité et adapter votre effectif aux fluctuations de votre activité.Sécuriser vos recrutements grâce à notre assurance recrutement et notre garantie de remplacement."
+        },
+        {
+          "question": "Quelles garanties offrez-vous sur la qualité des recrutements ?",
+          "response": "Nous mettons un point d’honneur à proposer des talents triés sur le volet. Chaque candidat passe par un processus rigoureux comprenant une évaluation des compétences, une vérification des références et un entretien approfondi. De plus, grâce à notre assurance recrutement, nous nous engageons à vous proposer une solution rapide en cas de départ prématuré d’un talent recruté."
+        },
+        {
+          "question": "Comment assurer la bonne intégration des talents externalisés dans mon entreprise ?",
+          "response": "Nous accompagnons nos clients bien au-delà du simple recrutement. Grâce à notre audit RH, nous analysons la manière dont le talent s’intègre dans votre organisation, suivons sa performance et mettons en place des solutions pour optimiser son efficacité. Nous proposons également des formations adaptées pour renforcer ses compétences et faciliter son adaptation à votre entreprise."
+        },
+        {
+          "question": "Pourquoi choisir BNJ Talent Maker plutôt qu’un autre cabinet de recrutement ?",
+          "response": "Nous accompagnons nos clients bien au-delà du simple recrutement. Grâce à notre audit RH, nous analysons la manière dont le talent s’intègre dans vBNJ Talent Maker n’est pas juste une agence de placement. Nous sommes un véritable partenaire stratégique pour vous aider à optimiser vos recrutements et à structurer vos équipes sur le long terme. Notre approche unique repose sur :Un réseau international de talents qualifiés.Une méthodologie de recrutement éprouvée et un accompagnement sur mesure.Une offre complète incluant audit RH, formations et assurance recrutement.Une garantie de remplacement pour sécuriser vos recrutements.otre organisation, suivons sa performance et mettons en place des solutions pour optimiser son efficacité. Nous proposons également des formations adaptées pour renforcer ses compétences et faciliter son adaptation à votre entreprise."
+        },
+        {
+          "question": "BNJ Talent Maker recrute-t-il uniquement en France ?",
+          "response": "Nous avons une portée internationale et nous accompagnons les entreprises dans leur recherche de talents partout dans le monde. L’externalisation vous permet d’accéder à des profils internationaux hautement qualifiés, tout en optimisant vos coûts de recrutement."
+        },
+        {
+          "question": "Comment débuter une collaboration avec BNJ Talent Maker ?",
+          "response": "C’est simple ! Prenez rendez-vous avec notre équipe pour une consultation gratuite. Nous analyserons vos besoins, vous présenterons nos solutions et vous proposerons une stratégie sur mesure pour optimiser vos recrutements et renforcer votre équipe."
+        }
+      ]
     }
   },
 
