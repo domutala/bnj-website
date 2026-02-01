@@ -10,6 +10,7 @@ export function useScrollTextHighlight(
   } = {},
 ) {
   const cloneTarget = ref<HTMLElement>();
+  const percent = shallowRef(0);
 
   function rebuild(node: ChildNode) {
     // Texte
@@ -78,8 +79,10 @@ export function useScrollTextHighlight(
     const spans = cloneTarget.value.querySelectorAll<HTMLElement>(
       "[data-text-highlight]",
     );
-    const percent = visibleHeight / bounding.height;
-    const count = spans.length * percent;
+    const p = visibleHeight / bounding.height;
+    const count = spans.length * p;
+
+    percent.value = p * 100;
 
     spans.forEach((span, i) => {
       if (i <= count) {
@@ -99,4 +102,6 @@ export function useScrollTextHighlight(
 
     window.removeEventListener("scroll", onScroll);
   }
+
+  return { percent };
 }
