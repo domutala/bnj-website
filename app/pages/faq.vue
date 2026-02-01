@@ -44,9 +44,9 @@ setColor("black");
       >
         <template #trailing="{ open }">
           <u-icon
-            name="i-lucide-plus ml-auto"
-            class="size-7 transition"
-            :class="{ 'rotate-45': open }"
+            name="i-lucide-plus"
+            class="size-7 transition ml-auto"
+            :class="{ 'rotate-45 cursor-pointer text-primary': open }"
           />
         </template>
       </UAccordion>
