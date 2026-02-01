@@ -141,7 +141,6 @@ import UiCareersWhy from "~/components/careers/why.vue";
 
   <section class="py-30">
     <u-container class="max-w-220">
-      <!-- <UIcon name="i-lucide-user-star" class="size-24 mb-5" /> -->
       <h2 class="text-3xl">
         {{ $t("pages.career.recruitmentProcess.title") }}
       </h2>
@@ -167,13 +166,6 @@ import UiCareersWhy from "~/components/careers/why.vue";
           }),
         ]"
       >
-        <template #body>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae soluta
-          provident iure impedit ratione earum maiores dolore! Nostrum
-          recusandae dolor laboriosam error exercitationem, quis fuga asperiores
-          maxime, eligendi incidunt pariatur!
-        </template>
-
         <template #leading="{ index, open }">
           <div
             class="rounded-full size-7 flex items-center justify-center border border-primary-300"

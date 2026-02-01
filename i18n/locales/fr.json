@@ -232,19 +232,19 @@
         "steps": [
           {
             "title": "Dépôt de candidature",
-            "description": "Soumettez votre CV et lettre de motivation via notre formulaire en ligne simple et rapide."
+            "description": "Soumettez votre candidature directement via notre formulaire en ligne en joignant votre CV et un message de motivation. Cette première étape nous permet de mieux comprendre votre parcours, vos compétences et vos aspirations professionnelles. Nous veillons à ce que le processus soit simple, rapide et accessible à tous."
           },
           {
-            "title": "Étude de votre profil",
-            "description": "Notre équipe examine attentivement chaque candidature pour identifier les talents et expériences correspondant à nos besoins."
+            "title": "Analyse de votre profil",
+            "description": "Notre équipe étudie chaque candidature avec attention afin d’identifier les profils correspondant à nos valeurs et aux besoins de nos partenaires. Nous prenons en compte vos compétences techniques, votre expérience, mais aussi votre motivation et votre potentiel d’évolution. Chaque profil est analysé de manière humaine et équitable."
           },
           {
-            "title": "Entretien",
-            "description": "Rencontrez notre équipe en visioconférence ou par téléphone pour échanger sur vos compétences, vos motivations et vos objectifs."
+            "title": "Entretien avec notre équipe",
+            "description": "Si votre profil est retenu, nous organisons un entretien par visioconférence ou par téléphone selon votre disponibilité. Cet échange nous permet de mieux vous connaître, d’évaluer vos compétences et de répondre à vos questions. C’est aussi l’occasion de vérifier l’adéquation entre vos attentes et nos opportunités."
           },
           {
             "title": "Validation et intégration",
-            "description": "Une fois sélectionné, nous vous accompagnons dans votre intégration afin de vous mettre dans les meilleures conditions pour réussir."
+            "description": "Après validation, nous vous accompagnons dans votre intégration afin de vous permettre de démarrer dans les meilleures conditions. Un onboarding structuré est mis en place pour vous présenter les outils, les méthodes et les équipes. Notre objectif est de favoriser une prise de poste fluide et une collaboration durable."
           }
         ],
         "note": "Nous privilégions un processus simple, rapide et humain."
