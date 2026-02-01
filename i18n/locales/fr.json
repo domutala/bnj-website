@@ -255,6 +255,60 @@
         "cta": "Envoyez-nous votre candidature via notre formulaire en ligne.",
         "footer": "Nous étudions chaque profil avec attention."
       }
+    },
+
+    "contact": {
+      "title": "Une question, un projet ou besoin d’informations ?",
+      "description": "Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.",
+
+      "items": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email",
+        "companyName": "Entreprise",
+        "companySize": "Taille de l'entreprise",
+        "message": "Message"
+      },
+
+      "companySize": {
+        "-20": "Moins de 20 employés",
+        "21-250": "Entre 20 et 250 employés",
+        "251-2000": "Entre 250 et 2000 employés",
+        "+2000": "plus de 2000 employés"
+      },
+
+      "errors": {
+        "firstName": {
+          "required": "Le prénom est obligatoire",
+          "invalid": "Le prénom doit être une chaîne de caractères",
+          "min": "Le prénom doit contenir au moins 2 caractères"
+        },
+        "lastName": {
+          "required": "Le nom est obligatoire",
+          "invalid": "Le nom doit être une chaîne de caractères",
+          "min": "Le nom doit contenir au moins 2 caractères"
+        },
+        "email": {
+          "required": "L’adresse email est obligatoire",
+          "invalid": "Veuillez saisir une adresse email valide"
+        },
+        "companyName": {
+          "required": "Le nom de l’entreprise est obligatoire",
+          "min": "Le nom de l’entreprise doit contenir au moins 2 caractères"
+        },
+        "companySize": {
+          "required": "Veuillez sélectionner la taille de l’entreprise"
+        },
+        "message": {
+          "required": "Le message est obligatoire",
+          "min": "Le message doit contenir au moins 10 caractères",
+          "max": "Le message ne doit pas dépasser 1000 caractères"
+        }
+      },
+
+      "submit": "Envoyer",
+
+      "success": "**Merci pour votre message !** \n\nNous l’avons bien reçu et notre équipe reviendra vers vous dans les meilleurs délais.\n\nÀ très bientôt."
     }
   },
 
