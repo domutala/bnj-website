@@ -63,8 +63,11 @@ const items = ref<NavigationMenuItem[]>([
       },
 
       {
-        label: "Progress",
-        to: "/docs/components/progress",
+        label: "Blog",
+      },
+
+      {
+        label: "Politique de confidentialité",
       },
     ],
   },

@@ -14,11 +14,11 @@
               class="text-primary mb-3"
             />
             <h2 class="text-2xl sm:text-4xl font-bold mx-auto">
-              {{ $t("services.title") }}
+              {{ $t("home.services.title") }}
             </h2>
 
             <p class="mt-5 text-xl">
-              {{ $t("services.description") }}
+              {{ $t("home.services.description") }}
             </p>
           </div>
         </div>
@@ -28,12 +28,12 @@
             class="w-full lg:grid-cols-2 lg:columns-2 space-y-3 gap-3"
           >
             <UPageCard
-              v-for="index in 4"
+              v-for="index in [0, 1, 2, 3]"
               :key="index"
-              :title="$t(`services.list.${index - 1}.title`)"
-              :description="$t(`services.list.${index - 1}.description`)"
-              :icon="$t(`services.list.${index - 1}.icon`)"
-              :class="{ '-mt-5': index === 1 }"
+              :title="$t(`services.list.${index}.title`)"
+              :description="$t(`services.list.${index}.description`)"
+              :icon="$t(`services.list.${index}.icon`)"
+              :class="{ '-mt-5': index === 0 }"
               :ui="{
                 leadingIcon: 'size-12',
                 container: 'bg-gray-950',
@@ -42,7 +42,7 @@
               }"
               :to="
                 $localePath({
-                  name: `services-` + $t(`services.list.${index - 1}.code`),
+                  name: `services-` + $t(`services.list.${index}.code`),
                 })
               "
               variant="ghost"

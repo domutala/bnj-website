@@ -59,7 +59,7 @@ const appConfig = useAppConfig();
           <div class="flex flex-col">
             <div class="opacity-50">Company</div>
             <a href="">Blog</a>
-            <a href="">About us</a>
+            <nuxt-link :to="$localePath({ name: 'faq' })">FAQ</nuxt-link>
             <nuxt-link :to="$localePath({ name: 'careers' })">
               Careers
             </nuxt-link>
@@ -69,7 +69,7 @@ const appConfig = useAppConfig();
           </div>
 
           <div class="flex flex-col">
-            <div class="opacity-50">Legal</div>
+            <div class="opacity-50">Ressources</div>
             <a href="">Site credit</a>
             <a href="">Telemetry Compliance</a>
             <a href="">Terms & Conditions</a>
