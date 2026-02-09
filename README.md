@@ -1,60 +1,85 @@
-# Nuxt Starter Template
+# BNJ Team Maker – Frontend Redesign (Case Study)
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+Ce repository présente une **refonte frontend indépendante** du site **BNJ Team Maker**, réalisée dans une démarche de **case study professionnel**.
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+L’objectif n’était pas uniquement esthétique, mais orienté :
+- clarté de l’offre,
+- amélioration de l’expérience utilisateur,
+- crédibilité perçue,
+- performance et maintenabilité frontend.
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+👉 Démo en ligne :  
+https://bnjteammaker.netlify.app/
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-  </picture>
-</a>
+---
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+## 🎯 Objectifs du projet
 
-## Quick Start
+- Moderniser l’interface utilisateur
+- Améliorer la lisibilité des contenus
+- Structurer les pages clés selon une logique business
+- Proposer une architecture frontend claire et maintenable
+- Démontrer une capacité d’itération rapide à partir de retours UX
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/starter
-```
+---
 
-## Deploy your own
+## 📄 Pages concernées
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
+- Accueil  
+- Externalisation  
+- Carrière  
+- FAQ  
+- Contact  
+- Candidature spontanée  
 
-## Setup
+---
 
-Make sure to install the dependencies:
+## 🛠️ Stack technique
 
-```bash
-pnpm install
-```
+- **Framework** : Nuxt.js (Vue 3)
+- **Langage** : TypeScript
+- **Architecture** : Composition API
+- **Styling** : CSS moderne / utilitaires
+- **Déploiement** : Netlify
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## 🧠 Approche & choix techniques
 
-```bash
-pnpm dev
-```
+- Composants réutilisables et lisibles
+- Séparation claire des responsabilités
+- Attention portée aux performances perçues
+- Responsive design (mobile-first)
+- Ajustements UX continus à partir de feedbacks réels
 
-## Production
+Suite à des retours utilisateurs, plusieurs améliorations ont été apportées :
+- harmonisation des tailles de texte,
+- amélioration des contrastes pour la lisibilité (notamment mobile),
+- ajustements du layout lors du scroll.
 
-Build the application for production:
+---
 
-```bash
-pnpm build
-```
+## ⚠️ Disclaimer
 
-Locally preview production build:
+Ce projet est une **initiative personnelle** à but démonstratif.  
+Il ne s’agit pas du site officiel de BNJ Team Maker.
 
-```bash
-pnpm preview
-```
+Tous les contenus appartiennent à leurs propriétaires respectifs.
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## 👤 Auteur
+
+**Mamadou DIA**  
+Senior Frontend Engineer – Vue.js / Nuxt.js  
+
+- LinkedIn : https://www.linkedin.com/in/domutala  
+- GitHub : https://github.com/domutala  
+- Email : ibntalla@gmail.com  
+
+---
+
+## 📌 Pourquoi ce projet ?
+
+Ce case study reflète mon positionnement :
+> un frontend orienté **produit**, **qualité**, **exécution rapide** et **collaboration métier**.

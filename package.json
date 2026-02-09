@@ -1,7 +1,12 @@
 {
-  "name": "personal-brand-website-design",
+  "name": "bnj-website",
   "private": true,
   "type": "module",
+  "description": "Case study – Refonte UI/UX du site BNJ Team Maker avec Nuxt.js (performance, lisibilité et expérience utilisateur).",
+  "homepage": "https://bnjteammaker.netlify.app",
+  "repository": {
+    "url": "https://github.com/domutala/bnj-website"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
