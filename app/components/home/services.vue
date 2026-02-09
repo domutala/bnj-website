@@ -2,12 +2,15 @@
 
 <template>
   <!-- w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 -->
-  <section id="services" class="relative w-full bg-black text-white py-30">
+  <section
+    id="services"
+    class="relative w-full bg-black text-white py-10 xl:py-30"
+  >
     <div class="absolute inset-0 bg-primary/2.5"></div>
     <u-container class="relative">
       <div class="flex flex-wrap">
-        <div class="w-full md:w-full lg:w-1/2">
-          <div class="mr-10 mb-20">
+        <div class="w-full md:w-full xl:w-1/2">
+          <div class="mb-20 text-center xl:text-left max-w-210 mx-auto">
             <u-icon
               name="i-lucide-laptop-minimal-check"
               size="92"
@@ -23,7 +26,7 @@
           </div>
         </div>
 
-        <div class="w-full md:w-full lg:w-1/2 py-3">
+        <div class="w-full md:w-full xl:w-1/2 py-3">
           <UPageColumns
             class="w-full lg:grid-cols-2 lg:columns-2 space-y-3 gap-3"
           >
@@ -57,10 +60,3 @@
     </u-container>
   </section>
 </template>
-
-<style lang="scss">
-.swiper-slide {
-  height: auto;
-  background-color: red;
-}
-</style>

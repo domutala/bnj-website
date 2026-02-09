@@ -36,8 +36,8 @@ setColor("white");
     </div>
 
     <u-container class="relative pt-30 md:pt-80">
-      <div class="max-w-220">
-        <h1 class="text-5xl font-bold">
+      <div class="max-w-220 mx-auto text-center lg:text-left px-5">
+        <h1 class="text-2xl md:text-5xl font-bold">
           {{ $t("pages.career.hero.title") }}
         </h1>
         <p class="mt-5 opacity-70">
@@ -45,7 +45,9 @@ setColor("white");
           nobis.
         </p>
 
-        <div class="flex items-center mt-10 gap-3">
+        <div
+          class="flex flex-col justify-center md:flex-row items-center mt-10 gap-3"
+        >
           <u-button
             color="light"
             variant="solid"
@@ -75,7 +77,7 @@ setColor("white");
       </div>
     </u-container>
 
-    <u-container class="mt-60 pb-50">
+    <u-container class="mt-20 lg:mt-50 pb-20">
       <UPageGrid class="lg:grid-cols-4 gap-5">
         <UPageCard
           v-for="(item, i) in [
@@ -98,12 +100,6 @@ setColor("white");
     </u-container>
   </ui-section>
 
-  <div class="relative w-full">
-    <div
-      class="absolute left-0 top-0 z-20 h-px w-full bg-linear-to-r from-transparent via-primary"
-    ></div>
-  </div>
-
   <UiCareersWhy />
 
   <div class="relative w-full">
@@ -114,14 +110,14 @@ setColor("white");
 
   <ui-section
     heade-color="white"
-    class="w-full bg-primary-950 text-white py-30"
+    class="w-full bg-primary-950 text-white pt-15 pb-30"
   >
-    <u-container>
+    <u-container class="px-5 text-center lg:text-left">
       <UIcon name="i-lucide-users-round" class="size-18 mb-5" />
-      <h2 class="text-3xl font-black">
+      <h2 class="text-xl sm:text-3xl font-black">
         {{ $t("pages.career.profiles.title") }}
       </h2>
-      <p class="text-2xl">
+      <p class="sm:text-2xl">
         {{ $t("pages.career.profiles.description") }}
         {{ $t("pages.career.profiles.note") }}
       </p>
@@ -153,7 +149,7 @@ setColor("white");
 
   <ui-section heade-color="black" class="py-30">
     <u-container class="max-w-220">
-      <h2 class="text-3xl">
+      <h2 class="text-3xl text-center">
         {{ $t("pages.career.recruitmentProcess.title") }}
       </h2>
 
@@ -191,42 +187,44 @@ setColor("white");
   </ui-section>
 
   <ui-section heade-color="black" class="w-full bg-white text-black pb-30">
-    <div class="text-center">
-      <h2 class="text-2xl md:text-4xl font-bold">
-        {{ $t("pages.career.apply.description") }}
-      </h2>
-      <p class="text-2xl">
-        {{ $t("pages.career.apply.cta") }}
-        {{ $t("pages.career.apply.footer") }}
-      </p>
+    <u-container class="text-center">
+      <div class="px-5">
+        <h2 class="text-2xl md:text-4xl font-semibold">
+          {{ $t("pages.career.apply.description") }}
+        </h2>
+        <p class="text-xl">
+          {{ $t("pages.career.apply.cta") }}
+          {{ $t("pages.career.apply.footer") }}
+        </p>
 
-      <div class="flex items-center justify-center mt-10 gap-3">
-        <u-button
-          color="neutral"
-          variant="solid"
-          size="xl"
-          class="rounded-full p-3 px-5 cursor-pointer"
-          :to="$localePath({ name: 'apply' })"
-        >
-          <span class="">
-            {{ $t("pages.career.apply.title") }}
-          </span>
-        </u-button>
+        <div class="flex flex-wrap items-center justify-center mt-10 gap-3">
+          <u-button
+            color="neutral"
+            variant="solid"
+            size="xl"
+            class="rounded-full p-3 px-5 cursor-pointer"
+            :to="$localePath({ name: 'apply' })"
+          >
+            <span class="">
+              {{ $t("pages.career.apply.title") }}
+            </span>
+          </u-button>
 
-        <u-button
-          color="neutral"
-          variant="solid"
-          size="xl"
-          class="rounded-full p-3 px-5 cursor-pointer"
-          to="https://www.linkedin.com/company/bnjteammaker/jobs/"
-          target="_blank"
-        >
-          <span class="flex items-center gap-2">
-            <u-icon name="i-simple-icons-linkedin" size="20" />
-            Nos offres d'emploi
-          </span>
-        </u-button>
+          <u-button
+            color="neutral"
+            variant="solid"
+            size="xl"
+            class="rounded-full p-3 px-5 cursor-pointer"
+            to="https://www.linkedin.com/company/bnjteammaker/jobs/"
+            target="_blank"
+          >
+            <span class="flex items-center gap-2">
+              <u-icon name="i-simple-icons-linkedin" size="20" />
+              Nos offres d'emploi
+            </span>
+          </u-button>
+        </div>
       </div>
-    </div>
+    </u-container>
   </ui-section>
 </template>

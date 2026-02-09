@@ -35,23 +35,100 @@ const links = ref<ButtonProps[]>([
 </script>
 
 <template>
-  <ui-section heade-color="black" class="w-full">
+  <ui-section
+    heade-color="black"
+    class="w-full bg-linear-to-r from-primary/50 to-transparent text-black bg-white py-25 md:25 lg:py-45 relative overflow-hidden"
+  >
+    <u-container class="relative z-11">
+      <div class="flex flex-col-reverse md:flex-row-reverse gap-10 px-5">
+        <div class="py-4">
+          <p class="text-xl md:text-2xl lg:text-4xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+            magni beatae blanditiis excepturi sapiente tempora consectetur
+            aperiam minus libero, in ipsam eos quos sit ipsum assumenda corporis
+            cupiditate non fugit.
+          </p>
+
+          <div class="text-black leading-[1.1] mt-4">
+            <div class="">Benjamin Parienty</div>
+            <div class="text-lg opacity-60">Team Marker</div>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="bg- size-50 lg:size-95 lg:rounded-br-3xl lg:rounded-t-3xl lg:rounded-bl-[20em] rounded-full shadow-2xl relative border-t border-r border-default mx-auto"
+          >
+            <img
+              src="/images/ceo.png"
+              alt="Illustration"
+              class="size-full mx-auto object-top object-cover px-0 rounded-[inherit]"
+            />
+
+            <u-modal :ui="{ content: 'max-w-6xl' }">
+              <u-button
+                size="xl"
+                color="neutral"
+                variant="outline"
+                class="absolute bottom-0 right-0 lg:bottom-10 lg:right-10 rounded-full p-3"
+              >
+                <template #leading>
+                  <u-icon
+                    name="i-mdi-play"
+                    class="size-10 text-red-600 cursor-pointer"
+                  />
+                </template>
+              </u-button>
+
+              <template #content>
+                <iframe
+                  class="h-140 w-full"
+                  src="https://www.youtube.com/embed/gcHYgmF13ic?si=9vKeLZ4ld5_IN823"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </template>
+            </u-modal>
+          </div>
+        </div>
+      </div>
+    </u-container>
+  </ui-section>
+
+  <!-- <ui-section heade-color="black" class="w-full bg-white text-black">
     <UPageSection
       orientation="horizontal"
-      class="relative overflow-hidden w-full py-30"
+      class="relative overflow-hidden w-full py-"
     >
       <template #title>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        <p class="text-black">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
       </template>
       <template #description>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nulla
-        expedita tenetur tempora. Facilis, adipisci! Nemo magnam, voluptatem et
-        placeat pariatur quos, debitis impedit temporibus eum fugit est sunt
-        eaque?
+        <p class="text-black">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nulla
+          expedita tenetur tempora. Facilis, adipisci! Nemo magnam, voluptatem
+          et placeat pariatur quos, debitis impedit temporibus eum fugit est
+          sunt eaque?
+        </p>
       </template>
       <template #footer>
-        <div class="">Benjamin Parienty</div>
-        <div class="text-lg opacity-60">Team Marker</div>
+        <div class="text-black">
+          <div class="">Benjamin Parienty</div>
+          <div class="text-lg opacity-60">Team Marker</div>
+        </div>
       </template>
 
       <div
@@ -67,7 +144,7 @@ const links = ref<ButtonProps[]>([
 
       <div class="w-full">
         <div
-          class="size-80 sm:size-100 overflow-hidden rounded-br-3xl rounded-t-3xl rounded-bl-[20em] shadow-2xl relative border-t border-r border-default ml-auto mr-10"
+          class="size-50 lg:size-100 overflow-hidden lg:rounded-br-3xl lg:rounded-t-3xl lg:rounded-bl-[20em] rounded-full shadow-2xl relative border-t border-r border-default ml-auto mr-10"
         >
           <img
             src="/images/ceo.png"
@@ -113,5 +190,5 @@ const links = ref<ButtonProps[]>([
         </div>
       </div>
     </UPageSection>
-  </ui-section>
+  </ui-section> -->
 </template>

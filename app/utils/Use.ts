@@ -13,6 +13,11 @@ class Use {
     const route = useRoute();
     return route;
   }
+
+  get i18n() {
+    const { $i18n } = useNuxtApp();
+    return $i18n;
+  }
 }
 
 export default new Use();

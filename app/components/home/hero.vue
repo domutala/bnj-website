@@ -1,6 +1,6 @@
 <template>
   <section
-    class="px-6 lg:px-16 relative z-0 w-full max-w-full overflow-x-clip pb-20 pt-[calc(var(--header-height)+5rem)] lg:overflow-x-clip"
+    class="px-0 sm:px-8 lg:px-16 relative z-0 w-full max-w-full overflow-x-clip pb-5 md:pb-20 pt-[calc(var(--header-height)+5rem)] lg:overflow-x-clip"
   >
     <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full">
       <div class="pointer-events-none relative h-full w-full">

@@ -97,7 +97,7 @@ setColor("black");
     </section>
 
     <section
-      class="px-6 lg:px-16 relative z-0 w-full max-w-full overflow-x-clip pb-20 pt-[calc(var(--header-height)+5rem)] lg:overflow-x-clip"
+      class="lg:px-16 relative z-0 w-full max-w-full overflow-x-clip pb-20 pt-[calc(var(--header-height)+5rem)] lg:overflow-x-clip"
     >
       <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-full">
         <div class="pointer-events-none relative h-full w-full">
@@ -126,11 +126,11 @@ setColor("black");
 
       <div class="w-full flex relative z-10">
         <u-container class="mt-60">
-          <div class="max-w-200 px-5 mb-30">
+          <div class="max-w-200 px-5 mb-0 md:mb-30">
             <div class="text-xl mb-2 text-primary">
               {{ $t("pages.services.outsourcing.hero.label") }}
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold">
+            <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold">
               {{ $t("pages.services.outsourcing.hero.title") }}
             </h1>
 
@@ -185,15 +185,15 @@ setColor("black");
     </div>
 
     <div class="w-full bg-gray-50">
-      <section class="w-full pb-30 pt-15 text-center">
+      <section class="w-full pb- pt-15 text-center">
         <u-container>
           <u-icon name="i-lucide-lightbulb" class="size-20 text-primary" />
 
-          <h2 class="text-4xl max-w-180 mt-5 mx-auto">
+          <h2 class="text-xl font-semibold md:text-4xl max-w-180 mt-5 mx-auto">
             Optimisez votre stratégie de développement grâce à nos experts
           </h2>
 
-          <p class="mt-5 text-xl">
+          <p class="mt-5 md:text-xl">
             BNJ Talent Makers est une académie spécialisée dans l’optimisation
             et l’externalisation de talents qualifiés pour des missions
             temporaires ou durables. En proposant des profils compétents et
@@ -209,12 +209,12 @@ setColor("black");
         </u-container>
       </section>
 
-      <section id="info" class="py-15">
+      <section id="info" class="py-15 px-5">
         <u-container
           class="bg-gray-100 rounded-2xl rounded-tl-[5em] border border-primary/30"
         >
-          <div class="p-10 py-16">
-            <div class="flex md:flex-row flex-col gap-5">
+          <div class="p-3 md:p-10 py-7">
+            <div class="flex lg:flex-row flex-col gap-5">
               <div>
                 <div
                   class="size-25 md:size-50 overflow-hidden rounded-full relative border-t border border-default mr-10"

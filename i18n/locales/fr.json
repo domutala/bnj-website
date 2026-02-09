@@ -502,5 +502,282 @@
     "Agent SAV",
     "Customer Success Manager",
     "Business Developer"
-  ]
+  ],
+
+  "apply": {
+    "items": {
+      "avatar": {
+        "create_btn": {
+          "update": "Modifer",
+          "add": "Ajouter une photo"
+        },
+        "remove": "Supprimer",
+        "info": "au format *.png ou *.jpeg max 10 mo"
+      },
+
+      "availability": {
+        "label": "Votre disponibilité",
+        "items": {
+          "immediately": "Immédiatement",
+          "1month": "Sous 1 moins",
+          "2mois": "Sous 2 mois",
+          "3mois": "Sous 3 mois",
+          "other": "Autres"
+        },
+        "errors": { "required": "Veuillez renseigner votre disponibilité" }
+      },
+
+      "desiredGrossSalary": {
+        "label": "Salaire souhaité (brut par an)",
+        "errors": {
+          "required": "Le salaire brut souhaité est requis.",
+          "invalid": "Veuillez renseigner un montant valide."
+        }
+      },
+
+      "educationLevel": {
+        "label": "Niveau d'étude",
+        "items": {
+          "none": "Aucun diplôme",
+          "bepCap": "BEP, CAP ou équivalent",
+          "baccalaureate": "Baccalauréat (bac +0)",
+          "bacPlus2": "DUT, BTS, diplôme d’État ou équivalent (bac +2)",
+          "bacPlus3": "Licence, Bachelor ou équivalent (bac +3)",
+          "bacPlus4": "Master 1 ou équivalent (bac +4)",
+          "bacPlus5": "Master, diplôme d’ingénieur ou équivalent (bac +5)",
+          "doctorate": "Doctorat ou équivalent (bac +8 et plus)"
+        },
+        "errors": { "required": "Veuillez sélectionner votre niveau d’étude." }
+      },
+
+      "motivation": {
+        "label": "Texte de motivation",
+        "errors": {
+          "invalid": "La motivation doit être un texte"
+        }
+      },
+
+      "cv": {
+        "label": "Déposer ou choisir un fichier",
+        "errors": {
+          "size": "Le fichier ne doit pas dépasser 10 Mo",
+          "type": "Le fichier doit être un PDF",
+          "required": "Un fichier est requis"
+        }
+      },
+
+      "firstName": {
+        "label": "Prénom",
+        "errors": {
+          "required": "Le prénom est obligatoire",
+          "invalid": "Le prénom doit être une chaîne de caractères",
+          "min": "Le prénom doit contenir au moins 2 caractères"
+        }
+      },
+
+      "lastName": {
+        "label": "Nom",
+        "errors": {
+          "required": "Le nom est obligatoire",
+          "invalid": "Le nom doit être une chaîne de caractères",
+          "min": "Le nom doit contenir au moins 2 caractères"
+        }
+      },
+
+      "email": {
+        "label": "Email",
+        "errors": {
+          "required": "L’adresse email est obligatoire",
+          "invalid": "Veuillez saisir une adresse email valide"
+        }
+      },
+
+      "phone": {
+        "label": "Numéro de téléphone",
+        "errors": {
+          "required": "Le numéro de téléphone est obligatoire",
+          "invalid": "Veuillez saisir un numéro de téléphone valide"
+        }
+      },
+
+      "acceptCondition": {
+        "label": "J'ai lu et déclare accepter les conditions d'utilisation",
+        "errors": {
+          "required": "Vous devez accepter les conditions d'utilisations."
+        }
+      }
+    },
+
+    "status": {
+      "init": { "label": "Candidature", "icon": "i-lucide-square-chart-gantt" },
+      "rejected": { "label": "Non retenu", "icon": "i-lucide-user-round-x" },
+      "toContact": {
+        "label": "À contacter",
+        "icon": "i-lucide-phone-outgoing"
+      },
+      "interview": { "label": "Entretien", "icon": "i-lucide-calendar-range" },
+      "hired": { "label": "Recruté", "icon": "i-lucide-check-check" }
+    },
+
+    "errors": {
+      "invalid_id": "l'ID est invalide.",
+      "apply_not_found": "Candidature non trouvé.",
+      "invalid_status": "L'état est invalide"
+    },
+
+    "actions": {
+      "donwload_cv": "Télécharger"
+    },
+
+    "submit": "Envoyer ma candidature",
+    "success": "Merci pour votre candidature. Nous avons bien reçu vos informations et notre équipe va les analyser avec attention. Si votre profil correspond à nos opportunités actuelles ou futures, nous vous contacterons pour la suite du processus."
+  },
+
+  "job": {
+    "items": {
+      "title": {
+        "label": "Titre du poste",
+        "placeholder": "Développeur Node.js Senior",
+        "hint": "Un titre clair et attractif améliore la visibilité de votre offre",
+        "help": "Ce titre sera affiché publiquement aux candidats",
+        "errors": {
+          "required": "Le titre du poste est obligatoire",
+          "min": "Le titre du poste doit contenir au moins 3 caractères",
+          "max": "Le titre du poste ne doit pas dépasser 150 caractères"
+        }
+      },
+
+      "location": {
+        "label": "Lieu du poste",
+        "placeholder": "Dakar, Télétravail ou Hybride",
+        "hint": "Indiquez le lieu principal de travail",
+        "help": "Vous pouvez préciser si le poste est ouvert au télétravail",
+        "errors": {
+          "required": "Le lieu du poste est obligatoire",
+          "min": "Le lieu doit contenir au moins 2 caractères"
+        }
+      },
+
+      "jobNature": {
+        "label": "Nature du poste",
+        "placeholder": "Sur site, À distance ou Hybride",
+        "hint": "Définissez le mode de travail",
+        "help": "Cette information aide les candidats à filtrer les offres",
+        "types": {
+          "ONSITE": "Sur site",
+          "REMOTE": "A distance",
+          "HYBRID": "Hybride"
+        }
+      },
+
+      "contractType": {
+        "label": "Type de contrat",
+        "placeholder": "CDI, CDD, Freelance…",
+        "hint": "Sélectionnez le type de contrat proposé",
+        "help": "Le type de contrat influence la visibilité de l’offre",
+        "errors": {
+          "required": "Le type de contrat est obligatoire",
+          "invalid": "Le type de contrat invalide"
+        },
+        "types": {
+          "CDI": "CDI",
+          "CDD": "CDD",
+          "INTERNSHIP": "Stage",
+          "FREELANCE": "Freelance",
+          "PART_TIME": "Temps partiel"
+        }
+      },
+
+      "salary": {
+        "label": "Salaire",
+        "placeholder": "Ex : 300 – 500",
+        "hint": "Fourchette salariale exprimée en XOF",
+        "help": "Les valeurs doivent être des multiples de 5 et inférieures à 10 000",
+        "errors": {
+          "multipleOfFive": "Le salaire doit être un multiple de 5 et inférieur à 10 000",
+          "invalidRange": "Le salaire minimum doit être strictement inférieur au salaire maximum"
+        }
+      },
+
+      "jobDescription": {
+        "label": "Description du poste",
+        "placeholder": "Décrivez les missions, responsabilités et objectifs du poste",
+        "hint": "Soyez précis pour attirer les bons profils",
+        "help": "Une description détaillée améliore la qualité des candidatures",
+        "errors": {
+          "required": "La description du poste est obligatoire",
+          "min": "La description du poste doit contenir au moins 50 caractères"
+        }
+      },
+
+      "candidateProfile": {
+        "label": "Profil recherché",
+        "placeholder": "Expérience, compétences techniques et soft skills attendues",
+        "hint": "Décrivez le candidat idéal",
+        "help": "Plus le profil est clair, plus les candidatures seront pertinentes",
+        "errors": {
+          "required": "Le profil du candidat est obligatoire",
+          "min": "Le profil du candidat doit contenir au moins 30 caractères"
+        }
+      },
+
+      "skills": {
+        "label": "Compétences requises",
+        "placeholder": "nodejs, docker, $nestjs, postgres",
+        "hint": "Ajoutez les compétences clés séparées par des virgules",
+        "help": "Les compétences précédées de $ doivent être reconnues par la plateforme",
+        "errors": {
+          "required": "Au moins une compétence est requise",
+          "invalid": "Compétence invalide ou non autorisée"
+        }
+      },
+
+      "companyDescription": {
+        "label": "À propos de l’entreprise",
+        "placeholder": "Présentez votre entreprise, sa mission et sa culture",
+        "hint": "Cette section valorise votre marque employeur",
+        "help": "Une bonne présentation augmente l’attractivité de l’offre",
+        "errors": {
+          "required": "La description de l’entreprise est obligatoire",
+          "min": "La description de l’entreprise doit contenir au moins 20 caractères"
+        }
+      }
+    },
+
+    "create": {
+      "steps": {
+        "title": {
+          "label": "Titre du poste"
+        },
+
+        "jobDetails": {
+          "label": "Détails du poste"
+        },
+
+        "jobDescription": {
+          "label": "Description du poste"
+        },
+
+        "candidateDetails": {
+          "label": "Profil recherché"
+        },
+
+        "companyDescription": {
+          "label": "À propos de l’entreprise"
+        }
+      },
+
+      "next": "Suivant",
+      "prev": "Précédent"
+    },
+
+    "actions": {
+      "update": "Modifer"
+    },
+
+    "errors": {
+      "job_not_found": "Aucun offre d'emple trouvé",
+      "invalid_id": "L'ID de l'offre d'emploi est invalide"
+    }
+  }
 }

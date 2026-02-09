@@ -18,7 +18,6 @@ setColor("white");
       <UiHomeHero />
       <UiHomeMarquee />
       <UiHomeProfile />
-      <UiHomeDescription class="z-49" />
     </ui-section>
 
     <div class="relative w-full">
@@ -27,9 +26,12 @@ setColor("white");
       ></div>
     </div>
 
-    <UiHomeService class="py-50" />
+    <UiHomeService />
 
     <UiHomeCeo />
+    <!-- 
+    -->
+    <UiHomeDescription />
 
     <div class="relative w-full">
       <div

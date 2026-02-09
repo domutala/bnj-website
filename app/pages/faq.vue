@@ -29,9 +29,9 @@ setColor("black");
         class="mt-10 bg-"
         :ui="{
           header: 'px-5 py-3',
-          label: 'text-xl ml-5',
+          label: 'md:text-xl ml-5',
           item: 'mb-3 rounded-2xl bg-gray-100',
-          body: 'text-xl px-10 border-t border-default py-5',
+          body: 'md:text-lg px-10 border-t border-default py-5',
         }"
         :items="[
           ...Array.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]).map((i) => {

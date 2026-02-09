@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
+    databaseUrl: "",
+
     public: {
       appUrl: "",
     },
@@ -23,15 +25,8 @@ export default defineNuxtConfig({
 
   components: [{ path: "~/components/ui", global: true, prefix: "ui" }],
 
-  colorMode: {
-    preference: "light",
-    fallback: "light",
-    classSuffix: "",
-    storageKey: "nuxt-color-mode",
-    disableTransition: true,
-  },
-
   ui: {
+    colorMode: false,
     theme: {
       colors: [
         "primary",
@@ -71,12 +66,15 @@ export default defineNuxtConfig({
     plugins: [
       "isToday",
       "isYesterday",
+      "isTomorrow",
       "weekOfYear",
       "isoWeek",
       "isBetween",
       "relativeTime",
       "utc",
       "timezone",
+      "calendar",
+      "localizedFormat",
     ],
     defaultLocale: "fr",
   },
@@ -84,6 +82,8 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: "fr",
     strategy: "prefix_and_default",
+
+    experimental: { localeDetector: "localeDetector.ts" },
 
     locales: [
       { code: "en", name: "English", file: "en.json", dir: "ltr" },

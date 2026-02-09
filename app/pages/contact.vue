@@ -112,7 +112,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   <div class="w-full relative z-10 pt-40 pb-30 text-black">
     <u-container class="">
       <div class="mb-15">
-        <h1 class="text-6xl font-bold text-center text-">
+        <h1 class="text-3xl lg:text-5xl font-bold text-center text-">
           {{ $t("pages.contact.title") }}
         </h1>
 

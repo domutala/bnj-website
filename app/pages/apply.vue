@@ -1,15 +1,25 @@
 <script lang="ts" setup>
 import type { FormSubmitEvent } from "@nuxt/ui";
-import * as z from "zod";
 import MarkdownIt from "markdown-it";
+import * as z from "zod";
+import { watchImmediate } from "@vueuse/core";
 
 const { setColor } = useHeader();
 setColor("black");
 
 const md = new MarkdownIt();
-const i18n = useI18n();
 
-const companySize = ["-20", "21-250", "251-2000", "+2000"];
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
+const ACCEPTED_AVATAR_TYPES = ["image/jpeg", "image/png", "image/webp"];
+
+enum ApplyStatus {
+  REJECTED = "rejected",
+  INIT = "init",
+  TO_CONTACT = "toContact",
+  INTERVIEW = "interview",
+  HIRED = "hired",
+}
+
 const availability = ["immediately", "1month", "2mois", "3mois", "other"];
 const educationLevel = [
   "none",
@@ -22,74 +32,91 @@ const educationLevel = [
   "doctorate",
 ];
 
-const success = ref(false);
+function getShema($t: (string: string) => string) {
+  const ApplyData = z.object({
+    firstName: z
+      .string($t("apply.items.firstName.errors.required"))
+      .min(2, $t("apply.items.firstName.errors.min")),
+    lastName: z
+      .string($t("apply.items.lastName.errors.required"))
+      .min(2, $t("apply.items.lastName.errors.required")),
+    email: z.email($t("apply.items.email.errors.invalid")),
+    phone: z.string($t("apply.items.email.errors.invalid")),
 
-const MAX_FILE_SIZE = 10 * 1024 * 1024;
+    avatar: z
+      .any()
+      .refine(
+        (file) => ACCEPTED_AVATAR_TYPES.includes(file?.type),
+        $t("apply.items.cv.errors.type"),
+      )
+      .refine(
+        (file) => file?.size <= MAX_FILE_SIZE,
+        $t("apply.items.avatar.errors.size"),
+      )
+      .optional(),
 
-const schema = z.object({
-  firstName: z
-    .string(i18n.t("pages.apply.errors.firstName.required"))
-    .min(2, i18n.t("pages.apply.errors.firstName.min")),
-  lastName: z
-    .string(i18n.t("pages.apply.errors.lastName.required"))
-    .min(2, i18n.t("pages.apply.errors.lastName.required")),
-  email: z.email(i18n.t("pages.apply.errors.email.invalid")),
-  phone: z.string(i18n.t("pages.apply.errors.email.invalid")),
+    cv: z
+      .any()
+      .refine(
+        (file) => file !== undefined,
+        $t("apply.items.cv.errors.required"),
+      )
+      .refine(
+        (file) => file?.type === "application/pdf",
+        $t("apply.items.avatar.errors.type"),
+      )
 
-  cv: z
-    .any()
-    .refine(
-      (file) => file !== undefined,
-      i18n.t("pages.apply.errors.cv.required"),
-    )
-    .refine(
-      (file) => file?.type === "application/pdf",
-      i18n.t("pages.apply.errors.cv.type"),
-    )
-    .refine(
-      (file) => file?.size <= MAX_FILE_SIZE,
-      i18n.t("pages.apply.errors.cv.size"),
+      .refine(
+        (file) => file?.size <= MAX_FILE_SIZE,
+        $t("apply.items.cv.errors.size"),
+      ),
+
+    desiredGrossSalary: z
+      .number($t("apply.items.desiredGrossSalary.errors.required"))
+      .min(6_000, $t("apply.items.desiredGrossSalary.errors.invalid"))
+      .max(200_000, $t("apply.items.desiredGrossSalary.errors.invalid")),
+
+    availability: z.enum(
+      availability,
+      $t("apply.items.availability.errors.required"),
     ),
 
-  desiredGrossSalary: z
-    .number(i18n.t("pages.apply.errors.20000.required"))
-    .min(20000)
-    .max(120000),
+    educationLevel: z.enum(
+      educationLevel,
+      $t("apply.items.educationLevel.errors.required"),
+    ),
 
-  availability: z.enum(
-    availability,
-    i18n.t("pages.apply.errors.availability.required"),
-  ),
+    acceptCondition: z.boolean(
+      $t("apply.items.acceptCondition.errors.required"),
+    ),
 
-  educationLevel: z.enum(
-    educationLevel,
-    i18n.t("pages.apply.errors.educationLevel.required"),
-  ),
+    motivation: z
+      .string($t("apply.items.motivation.errors.invalid"))
+      .optional(),
+  });
 
-  acceptCondition: z.boolean(
-    i18n.t("pages.apply.errors.acceptCondition.required"),
-  ),
+  return ApplyData;
+}
 
-  motivation: z
-    .string(i18n.t("pages.apply.errors.motivation.required"))
-    .optional(),
-});
+const success = ref(false);
+const schema = getShema(Use.i18n.t);
 
 type Schema = z.output<typeof schema>;
+const state = reactive<Partial<Schema>>({ desiredGrossSalary: 28000 });
 
-const state = reactive<Partial<Schema>>({
-  firstName: undefined,
-  lastName: undefined,
-  email: undefined,
-  educationLevel: undefined,
-  motivation: undefined,
-
-  desiredGrossSalary: 28000,
-});
-
-const toast = useToast();
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  success.value = true;
+  try {
+    success.value = true;
+  } catch (error) {}
+}
+
+function createObjectUrl(file?: File) {
+  if (!file) return;
+  return URL.createObjectURL(file);
+}
+
+function onChange(key: "cv" | "avatar", file?: File | null | undefined) {
+  state[key] = file ?? undefined;
 }
 </script>
 
@@ -160,7 +187,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </div>
 
       <div class="bg-white p-10 relative">
-        <p v-if="success" v-html="md.render($t('pages.apply.success'))"></p>
+        <p v-if="success" v-html="md.render($t('apply.success'))"></p>
 
         <UForm
           v-else
@@ -169,8 +196,69 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           class="space-y-4 p-5"
           @submit="onSubmit"
         >
+          <UFormField name="avatar">
+            <UFileUpload
+              v-slot="{ open, removeFile }"
+              accept="image/png, image/jpeg, image/webp"
+              @update:model-value="(f) => onChange('avatar', f)"
+            >
+              <div class="flex items-center gap-8">
+                <UAvatar
+                  class="size-32 border border-default"
+                  size="xl"
+                  :src="createObjectUrl(state.avatar)"
+                  :alt="
+                    [state.firstName, state.lastName].filter((e) => e).join(' ')
+                  "
+                >
+                  <UIcon
+                    v-if="!state.avatar && !state.firstName && !state.lastName"
+                    name="i-lucide-user-round"
+                    class="opacity-50 size-18"
+                  />
+                </UAvatar>
+
+                <div>
+                  <div class="flex gap-1.5">
+                    <UButton
+                      size="lg"
+                      variant="outline"
+                      color="neutral"
+                      class="cursor-pointer"
+                      icon="i-lucide-upload"
+                      @click="open()"
+                    >
+                      {{
+                        $t(
+                          state.avatar
+                            ? "apply.items.avatar.create_btn.update"
+                            : "apply.items.avatar.create_btn.add",
+                        )
+                      }}
+                    </UButton>
+
+                    <UButton
+                      v-if="state.avatar"
+                      size="lg"
+                      variant="outline"
+                      color="neutral"
+                      class="cursor-pointer"
+                      @click="removeFile()"
+                    >
+                      {{ $t("apply.items.avatar.remove") }}
+                    </UButton>
+                  </div>
+
+                  <div class="mt-0.5 opacity-70">
+                    {{ $t("apply.items.avatar.info") }}
+                  </div>
+                </div>
+              </div>
+            </UFileUpload>
+          </UFormField>
+
           <UFormField
-            :label="$t('pages.apply.items.firstName')"
+            :label="$t('apply.items.firstName.label')"
             name="firstName"
             required
           >
@@ -183,7 +271,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           </UFormField>
 
           <UFormField
-            :label="$t('pages.apply.items.lastName')"
+            :label="$t('apply.items.lastName.label')"
             name="lastName"
             required
           >
@@ -191,7 +279,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           </UFormField>
 
           <UFormField
-            :label="$t('pages.apply.items.email')"
+            :label="$t('apply.items.email.label')"
             name="email"
             required
           >
@@ -199,7 +287,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           </UFormField>
 
           <UFormField
-            :label="$t('pages.apply.items.phone')"
+            :label="$t('apply.items.phone.label')"
             name="phone"
             required
           >
@@ -208,10 +296,14 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
           <UFormField name="cv" required>
             <UFileUpload
-              :label="$t('pages.apply.items.cv')"
+              :label="$t('apply.items.cv.label')"
+              :ui="{
+                base: 'bg-neutral-100 border border-primary-200 cursor-pointer',
+              }"
+              highlight
               color="neutral"
               description="Fichier PDF (max. 10MB)"
-              class="w-full min-h-48 cursor-pointer"
+              class="w-full min-h-48"
               accept="application/pdf"
               layout="list"
               v-model="state.cv"
@@ -219,7 +311,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           </UFormField>
 
           <UFormField
-            :label="$t('pages.apply.items.availability')"
+            :label="$t('apply.items.availability.label')"
             name="availability"
             required
           >
@@ -227,7 +319,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               v-model="state.availability"
               :items="
                 availability.map((c) => ({
-                  label: $t(`pages.apply.availability.${c}`),
+                  label: $t(`apply.items.availability.items.${c}`),
                   value: c,
                 }))
               "
@@ -235,7 +327,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           </UFormField>
 
           <UFormField
-            :label="$t('pages.apply.items.educationLevel')"
+            :label="$t('apply.items.educationLevel.label')"
             name="educationLevel"
             required
           >
@@ -243,7 +335,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               v-model="state.educationLevel"
               :items="
                 educationLevel.map((c) => ({
-                  label: $t(`pages.apply.educationLevel.${c}`),
+                  label: $t(`apply.items.educationLevel.items.${c}`),
                   value: c,
                 }))
               "
@@ -269,7 +361,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           </UFormField>
 
           <UFormField
-            :label="$t('pages.apply.items.motivation')"
+            :label="$t('apply.items.motivation.label')"
             name="motivation"
           >
             <UTextarea v-model="state.motivation" class="w-full" size="xl" />
@@ -278,7 +370,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           <UFormField name="acceptCondition">
             <UCheckbox
               v-model="state.acceptCondition"
-              :label="$t('pages.apply.items.acceptCondition')"
+              :label="$t('apply.items.acceptCondition.label')"
             />
           </UFormField>
 
@@ -288,7 +380,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               class="cursor-pointer p-3 px-5 mx-auto"
               size="xl"
             >
-              {{ $t("pages.apply.submit") }}
+              {{ $t("apply.submit") }}
             </UButton>
           </div>
         </UForm>

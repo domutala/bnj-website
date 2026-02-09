@@ -43,21 +43,17 @@
           class="absolute left-0 top-0 z-20 h-full w-px bg-linear-to-t from-transparent via-white"
         ></div>
 
-        <div class="relative py-10 w-full">
+        <div class="relative w-full">
           <div
-            class="flex flex-col items-center gap-10 lg:flex-row lg:gap-12 lg:pl-28"
+            class="flex flex-col items-center lg:flex-row lg:gap-12 lg:pl-28"
           >
             <h2
-              class="body-s-medium w-full max-w-55.5 text-center font-medium! lg:min-w-55 lg:max-w-55.25 lg:text-left text-2xl"
+              class="body-s-medium w-full py-2 max-w-55.5 text-center font-medium! lg:min-w-55 lg:max-w-55.25 lg:text-left text-xl hidden lg:block"
             >
               {{ $t("home.marquee.title") }}
             </h2>
 
-            <div class="relative w-full overflow-hidden">
-              <div
-                class="pointer-events-none absolute -left-px -top-6 z-10 h-24 w-4 bg-linear-to-r px-4 py-2 md:w-8 lg:w-24 from-black via-black"
-              ></div>
-
+            <div class="relative w-full overflow-hidden py-5">
               <UMarquee :overlay="false" pause-on-hover>
                 <img
                   :src="'/images/partners/bja.png'"
@@ -101,10 +97,6 @@
                   class="h-10 invert brightness-0"
                 />
               </UMarquee>
-
-              <div
-                class="pointer-events-none absolute -right-px -top-6 z-10 h-24 w-4 bg-linear-to-l px-4 py-2 md:w-8 lg:w-24 from-black via-black"
-              ></div>
             </div>
           </div>
         </div>
