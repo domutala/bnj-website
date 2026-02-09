@@ -186,14 +186,14 @@ function onChange(key: "cv" | "avatar", file?: File | null | undefined) {
         </h1>
       </div>
 
-      <div class="bg-white p-10 relative">
+      <div class="bg-white px-5 md:px-10 py-10 relative">
         <p v-if="success" v-html="md.render($t('apply.success'))"></p>
 
         <UForm
           v-else
           :schema="schema"
           :state="state"
-          class="space-y-4 p-5"
+          class="space-y-4"
           @submit="onSubmit"
         >
           <UFormField name="avatar">
